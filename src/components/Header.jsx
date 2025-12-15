@@ -7,12 +7,11 @@ function Header() {
     <div className="relative overflow-hidden bg-white h-auto lg:h-screen">
       <div className="relative h-auto lg:h-full flex flex-col lg:flex-row items-center justify-center z-10 py-8 lg:py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-auto lg:h-full flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-          <div className="lg:hidden w-full text-left space-y-4 px-4 pt-8">
+          <div className="lg:hidden w-full text-left space-y-4 px-4 pt-8" style={{ marginTop: '-25px' }}>
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-4xl font-black leading-tight text-black">
                 Bird Care, <span className="text-orange-500">Bird Species</span> & Conservation Guide
               </h1>
-              <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full"></div>
             </div>
             
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">

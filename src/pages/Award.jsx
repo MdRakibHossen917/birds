@@ -60,15 +60,6 @@ function Award() {
       description: 'Awarded for significant contributions to the conservation of endangered bird species through breeding programs and habitat preservation efforts.',
       icon: '🦜',
       color: 'from-orange-500 to-red-600'
-    },
-    {
-      id: 7,
-      title: 'Professional Aviary Standards Compliance',
-      organization: 'Avian Health & Safety Board',
-      year: '2021',
-      description: 'Certified for maintaining the highest standards in aviary safety, hygiene, and bird health protocols, serving as a model for the industry.',
-      icon: '✅',
-      color: 'from-blue-600 to-cyan-500'
     }
   ]
 

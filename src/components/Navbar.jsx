@@ -27,7 +27,7 @@ function Navbar() {
                   alt="HK Aviary BD Logo" 
                   className="h-10 md:h-12 w-auto object-contain"
                 />
-                <span className="hidden sm:inline">HK Aviary BD</span>
+                <span className="inline">HK Aviary BD</span>
               </Link>
             </div>
             
