@@ -1,14 +1,36 @@
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router'
 import Header from '../components/Header.jsx'
 
 function Home() {
   const popularBirds = [
-    { name: 'Parrot', emoji: '🦜', description: 'Colorful and intelligent birds known for their ability to mimic sounds.', color: 'from-blue-500 to-blue-600' },
-    { name: 'Eagle', emoji: '🦅', description: 'Majestic birds of prey with incredible vision and hunting skills.', color: 'from-orange-500 to-orange-600' },
-    { name: 'Owl', emoji: '🦉', description: 'Nocturnal birds with exceptional night vision and silent flight.', color: 'from-blue-500 to-blue-600' },
-    { name: 'Peacock', emoji: '🦚', description: 'Beautiful birds known for their stunning colorful tail feathers.', color: 'from-orange-500 to-orange-600' },
-    { name: 'Flamingo', emoji: '🦩', description: 'Elegant pink birds found in tropical and subtropical regions.', color: 'from-blue-500 to-blue-600' },
-    { name: 'Hummingbird', emoji: '🐦', description: 'Tiny birds with rapid wing beats and ability to hover in place.', color: 'from-orange-500 to-orange-600' },
+    { 
+      name: 'Lovebirds', 
+      image: 'https://i.ibb.co.com/mVYj3Jyy/513972978-719384907346802-5886751649123918036-n.jpg',
+      badge: '2025 Champion',
+      badgeColor: 'bg-yellow-500',
+      description: 'National Loverbird Championship 2025 Winner - Beautiful and affectionate lovebirds perfect for companionship.', 
+      color: 'from-blue-500 to-blue-600',
+      link: '/lovebird/1'
+    },
+    { 
+      name: 'Upcoming Champion', 
+      image: 'https://i.ibb.co.com/hFdjK7mj/542047303-771751132110179-6116929702425819055-n.jpg',
+      badge: 'Title Holder',
+      badgeColor: 'bg-orange-500',
+      description: 'Upcoming Title Holder - Exceptional beauty and quality, ready to take the crown.', 
+      color: 'from-orange-500 to-orange-600',
+      link: '/lovebird/2'
+    },
+    { 
+      name: 'Baby Lovebirds', 
+      image: 'https://i.ibb.co.com/WNpcbnhT/484012358-642550928363534-4935449803921063486-n.jpg',
+      badge: 'Next Big Thing',
+      badgeColor: 'bg-green-500',
+      description: 'The Next Big Thing - Adorable baby lovebirds with promising potential and bright future.', 
+      color: 'from-green-500 to-green-600',
+      link: '/lovebird/4'
+    },
   ]
 
   return (
@@ -25,47 +47,55 @@ function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
             Popular <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Bird Species</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Explore our collection of fascinating bird species from around the world. 
             Discover their unique characteristics and learn how to care for them.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {popularBirds.map((bird, index) => (
-            <div 
-              key={index} 
-              className="group relative bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden"
+            <Link
+              key={index}
+              to={bird.link}
+              className="group relative bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden block"
             >
               {/* Gradient Background on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${bird.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-xl`}></div>
               
-              {/* Icon Container */}
-              <div className="relative mb-6">
-                <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-50 to-orange-50 rounded-full flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <div className="text-6xl transform group-hover:scale-110 transition-transform duration-300">
-                    {bird.emoji}
+              {/* Image Container */}
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={bird.image} 
+                  alt={bird.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Badge */}
+                {bird.badge && (
+                  <div className={`absolute top-4 right-4 ${bird.badgeColor} text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transform group-hover:scale-110 transition-transform`}>
+                    {bird.badge}
                   </div>
-                </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               {/* Content */}
-              <div className="relative">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center group-hover:text-blue-600 transition-colors duration-300">
+              <div className="relative p-6">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 text-center group-hover:text-blue-600 transition-colors duration-300">
                   {bird.name}
                 </h3>
-                <p className="text-gray-600 text-center leading-relaxed mb-6">{bird.description}</p>
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 text-center leading-relaxed mb-6 line-clamp-3">{bird.description}</p>
                 <div className="text-center">
-                  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-orange-500 text-white font-semibold rounded-full hover:from-blue-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    Learn More
+                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-orange-500 text-white font-semibold rounded-full hover:from-blue-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+                    View Details
                     <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -81,11 +111,11 @@ function Home() {
             <div className="inline-block mb-4">
               <span className="text-5xl">💡</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
               Bird <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Care Tips</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Essential guidelines to keep your feathered friends healthy and happy. 
               Follow these expert tips for the best care.
             </p>
@@ -98,12 +128,12 @@ function Home() {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-3xl mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
                     🍎
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800">Feeding</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Feeding</h3>
                 </div>
                 <ul className="space-y-4 text-gray-600">
                   <li className="flex items-start group/item">
                     <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold mt-0.5">✓</span>
-                    <span className="group-hover/item:text-blue-600 transition-colors">Provide fresh water daily and change it regularly</span>
+                    <span className="text-sm sm:text-base md:text-lg group-hover/item:text-blue-600 transition-colors">Provide fresh water daily and change it regularly</span>
                   </li>
                   <li className="flex items-start group/item">
                     <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold mt-0.5">✓</span>

@@ -7,10 +7,14 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <div className="flex items-center mb-6">
-              <span className="text-3xl mr-2">🦅</span>
+            <div className="flex items-center mb-6 gap-3">
+              <img 
+                src="/logo.png" 
+                alt="HK Aviary BD Logo" 
+                className="h-12 w-auto object-contain"
+              />
               <h3 className="text-2xl font-bold text-blue-400">
-                Bird Aviary
+                HK Aviary BD
               </h3>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
@@ -133,7 +137,7 @@ function Footer() {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Bird Aviary. All rights reserved.
+              &copy; {new Date().getFullYear()} HK Aviary BD. All rights reserved.
             </p>
             <div className="flex space-x-6 text-gray-400 text-sm">
               <Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>

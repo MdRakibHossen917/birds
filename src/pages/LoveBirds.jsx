@@ -1,0 +1,99 @@
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router'
+
+function LoveBirds() {
+  const loveBirds = [
+    {
+      id: 1,
+      name: 'Lovebird',
+      mainImage: 'https://i.ibb.co.com/rVc1CPT/481908573-637099218908705-4380355355270839962-n.jpg',
+      detailPage: '/lovebird/1',
+      color: 'Various Colors',
+      description: 'Beautiful and affectionate lovebirds perfect for companionship'
+    },
+    {
+      id: 2,
+      name: 'White Blue Parrot',
+      mainImage: 'https://i.ibb.co.com/nM5bDmMp/541736819-771776712107621-4979564611869472147-n.jpg',
+      detailPage: '/lovebird/2',
+      color: 'White & Blue',
+      description: 'Stunning white and blue color variation of lovebirds'
+    },
+    {
+      id: 3,
+      name: 'Red Yellow Lovebird',
+      mainImage: 'https://i.ibb.co.com/ccymqrw2/523376996-738266118792014-5345568049304194449-n.jpg',
+      detailPage: '/lovebird/3',
+      color: 'Red & Yellow',
+      description: 'Vibrant red and yellow colored lovebirds with beautiful plumage'
+    },
+    {
+      id: 4,
+      name: 'Baby Lovebirds',
+      mainImage: 'https://i.ibb.co.com/zHZTCH50/484897377-642552788363348-5330246655922834583-n.jpg',
+      detailPage: '/lovebird/4',
+      color: 'Mixed Colors',
+      description: 'Adorable baby lovebirds ready for new homes'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Lovebirds - HK Aviary BD | Beautiful Companion Birds</title>
+        <meta name="description" content="Explore our collection of beautiful lovebirds. Find detailed information, images, and specifications for different lovebird varieties." />
+        <meta name="keywords" content="lovebirds, pet birds, companion birds, bird species, bird details" />
+      </Helmet>
+      <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
+              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Lovebirds</span>
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our beautiful collection of lovebirds with detailed specifications and multiple angle views
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {loveBirds.map((bird) => (
+              <Link 
+                key={bird.id}
+                to={bird.detailPage}
+                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={bird.mainImage} 
+                    alt={bird.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                    {bird.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-blue-600 font-semibold mb-2">
+                    {bird.color}
+                  </p>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">
+                    {bird.description}
+                  </p>
+                  <div className="flex items-center text-sm sm:text-base text-blue-600 font-semibold">
+                    View Details
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default LoveBirds
+

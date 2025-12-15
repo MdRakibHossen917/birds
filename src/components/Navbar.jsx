@@ -20,9 +20,13 @@ function Navbar() {
           <div className="flex justify-between items-center h-20">
             {/* Logo on left side */}
             <div className="flex items-center">
-              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-blue-600 hover:text-orange-500 transition-all duration-300 flex items-center">
-                <span className="mr-2 text-3xl">🦅</span>
-                <span>Bird Aviary</span>
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-blue-600 hover:text-orange-500 transition-all duration-300 flex items-center gap-3">
+                <img 
+                  src="/logo.png" 
+                  alt="HK Aviary BD Logo" 
+                  className="h-12 w-auto object-contain"
+                />
+                <span>HK Aviary BD</span>
               </Link>
             </div>
             
@@ -100,9 +104,13 @@ function Navbar() {
         <div className="flex flex-col h-full">
           {/* Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center">
-              <span className="text-2xl mr-2">🦅</span>
-              <span className="text-xl font-bold text-blue-600">Bird Aviary</span>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/logo.png" 
+                alt="HK Aviary BD Logo" 
+                className="h-10 w-auto object-contain"
+              />
+              <span className="text-xl font-bold text-blue-600">HK Aviary BD</span>
             </div>
             <button
               onClick={() => setIsMenuOpen(false)}

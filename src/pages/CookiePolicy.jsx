@@ -15,11 +15,11 @@ function CookiePolicy() {
             <div className="inline-block mb-4">
               <span className="text-5xl">🍪</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
               Cookie <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Policy</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600">
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </div>
@@ -29,8 +29,8 @@ function CookiePolicy() {
             <div className="prose prose-lg max-w-none">
               
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">1. What Are Cookies</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">1. What Are Cookies</h2>
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-4">
                   Cookies are small text files that are placed on your computer or mobile device when you visit a website. 
                   They are widely used to make websites work more efficiently and provide information to the owners of the site.
                 </p>

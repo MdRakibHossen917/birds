@@ -119,10 +119,10 @@ function Award() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
             <div className="text-center">
              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
                 National <span className="text-orange-300">Loverbird Championship 2025</span>
               </h1>
-              <p className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
+              <p className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
                 Champion of Excellence in Aviculture
               </p>
             </div>
@@ -131,12 +131,57 @@ function Award() {
         
         {/* Awards Content Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          {/* Champion Achievement Section */}
+          <div className="bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 rounded-xl shadow-2xl p-8 md:p-12 mb-16 border-4 border-yellow-400 relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+            
+            <div className="relative z-10">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Image Section */}
+                <div className="flex-shrink-0">
+                  <div className="relative">
+                    <img 
+                      src="https://i.ibb.co.com/Kc43XtLf/513957320-719384884013471-1840928253361452718-n.jpg" 
+                      alt="Champion - Rare Mutation Category"
+                      className="w-64 h-64 md:w-80 md:h-80 rounded-xl object-cover border-4 border-white shadow-2xl"
+                    />
+                    <div className="absolute -top-4 -right-4 bg-yellow-400 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg transform rotate-12">
+                      🏆 Champion
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Text Section */}
+                <div className="flex-1 text-center md:text-left">
+                  <div className="mb-4">
+                    <span className="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-4">
+                      2025 Champion
+                    </span>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
+                    Rare Mutation Category Winner
+                  </h2>
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 font-medium">
+                    By the grace of Allah, I have become the champion in the Rare Mutation category at the Love Bird Championship Bangladesh 2025, organized by the Lovebird Supporters of Bangladesh.
+                  </p>
+                  <div className="mt-6">
+                    <span className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg">
+                      Lovebird Supporters of Bangladesh
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
               Our <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Awards & Achievements</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Recognized excellence in bird care, conservation, and aviculture. 
               Our commitment to quality and innovation has been honored by leading organizations worldwide.
             </p>
@@ -172,15 +217,15 @@ function Award() {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
                     {award.title}
                   </h3>
                   
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed mb-4 line-clamp-3">
                     {award.description}
                   </p>
                   
-                  <div className="text-xs text-gray-500 italic">
+                  <div className="text-xs sm:text-sm text-gray-500 italic">
                     {award.organization}
                   </div>
                 </div>
@@ -202,11 +247,11 @@ function Award() {
                 <div className="inline-block mb-4">
                   <span className="text-5xl">📜</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
                   Professional <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Certifications</span>
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                   Our team maintains the highest professional standards through continuous education and certification.
                 </p>
               </div>
@@ -221,10 +266,10 @@ function Award() {
                     <div className="relative">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
                             {cert.name}
                           </h3>
-                          <p className="text-gray-600 text-sm mb-2">{cert.issuer}</p>
+                          <p className="text-gray-600 text-xs sm:text-sm md:text-base mb-2">{cert.issuer}</p>
                         </div>
                         <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full whitespace-nowrap ml-4">
                           {cert.year}
@@ -250,10 +295,10 @@ function Award() {
               <div className="text-gray-600 font-medium">Years of Excellence</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent mb-2">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent mb-2">
                 {awards.length}
               </div>
-              <div className="text-gray-600 font-medium">Awards Received</div>
+              <div className="text-sm sm:text-base md:text-lg text-gray-600 font-medium">Awards Received</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
               <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent mb-2">

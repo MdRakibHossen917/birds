@@ -32,11 +32,11 @@ function AllBirds() {
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
               All <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Bird Species</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Explore our complete collection of fascinating bird species from around the world
             </p>
           </div>
@@ -51,12 +51,12 @@ function AllBirds() {
                   <div className="text-6xl mb-3 transform group-hover:scale-110 transition-transform duration-300">
                     {bird.emoji}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
                     {bird.name}
                   </h3>
                 </div>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{bird.description}</p>
-                <div className="space-y-2 text-sm">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base mb-4 leading-relaxed">{bird.description}</p>
+                <div className="space-y-2 text-xs sm:text-sm md:text-base">
                   <div className="flex items-start">
                     <span className="text-blue-600 font-semibold mr-2 min-w-[60px]">Habitat:</span>
                     <span className="text-gray-600">{bird.habitat}</span>

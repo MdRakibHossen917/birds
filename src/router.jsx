@@ -8,6 +8,9 @@ import Award from './pages/Award.jsx'
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import TermsOfService from './pages/TermsOfService.jsx'
 import CookiePolicy from './pages/CookiePolicy.jsx'
+import LoveBirds from './pages/LoveBirds.jsx'
+import LoveBirdDetail from './pages/LoveBirdDetail.jsx'
+import BlogDetail from './pages/BlogDetail.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/blogs',
         element: <Blogs />,
+      },
+      {
+        path: '/blog/:id',
+        element: <BlogDetail />,
       },
       {
         path: '/award',
@@ -44,6 +51,14 @@ const router = createBrowserRouter([
       {
         path: '/cookie-policy',
         element: <CookiePolicy />,
+      },
+      {
+        path: '/lovebirds',
+        element: <LoveBirds />,
+      },
+      {
+        path: '/lovebird/:id',
+        element: <LoveBirdDetail />,
       },
     ],
   },

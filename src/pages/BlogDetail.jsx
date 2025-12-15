@@ -1,13 +1,14 @@
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router'
+import { useParams, Link } from 'react-router'
 
-function Blogs() {
-  const blogPosts = [
-    {
+function BlogDetail() {
+  const { id } = useParams()
+  
+  const blogPosts = {
+    1: {
       id: 1,
       title: 'Quality green Fisher',
       date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-      excerpt: 'Discover the exceptional quality and beauty of the green Fisher lovebird, a premium breed known for its vibrant coloration and outstanding genetic traits.',
       category: 'Lovebirds',
       image: 'https://i.ibb.co.com/ycgrQf3s/600338437-852980050653953-3439632037202857044-n-1.jpg',
       nfs: true,
@@ -33,11 +34,10 @@ Breeding Quality Green Fisher lovebirds requires expertise in color genetics. Su
 
 This bird is currently marked as NFS (Not For Sale) and is part of our breeding program. It represents the high standards we maintain at HK Aviary BD for producing exceptional quality lovebirds.`
     },
-    {
+    2: {
       id: 2,
       title: 'Split split and split',
       date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-      excerpt: 'Explore the fascinating world of split pattern lovebirds, where multiple genetic mutations combine to create unique and stunning visual patterns.',
       category: 'Lovebirds',
       image: 'https://i.ibb.co.com/3yDyg6Hy/596822923-848867471065211-2203380465008517511-n.jpg',
       nfs: true,
@@ -73,11 +73,10 @@ At HK Aviary BD, we maintain detailed genetic records of all our breeding birds.
 
 Split birds require the same excellent care as any other lovebird. Proper nutrition, housing, and veterinary care ensure they remain healthy and productive members of our breeding program.`
     },
-    {
+    3: {
       id: 3,
       title: 'Blue euwing Opaline',
       date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-      excerpt: 'Marvel at the stunning Blue Euwing Opaline lovebird, a rare combination that showcases the beauty of genetic mutations in avian breeding.',
       category: 'Lovebirds',
       image: 'https://i.ibb.co.com/VpLv0DsF/558169051-793255899959702-6165382997387845026-n.jpg',
       nfs: true,
@@ -133,64 +132,132 @@ Like all lovebirds, these birds require:
 
 At HK Aviary BD, we specialize in producing high-quality color mutations like the Blue Euwing Opaline. This bird represents our commitment to excellence in lovebird breeding and genetic diversity.`
     }
-  ]
+  }
+
+  const post = blogPosts[id] || blogPosts[1]
+
+  // Parse markdown-style content
+  const parseContent = (content) => {
+    const sections = content.split('\n\n## ').map((section, index) => {
+      if (index === 0) {
+        return { type: 'paragraph', content: section.trim() }
+      }
+      const [heading, ...rest] = section.split('\n')
+      return {
+        type: 'section',
+        heading: heading.trim(),
+        content: rest.join('\n').trim()
+      }
+    })
+
+    return sections
+  }
+
+  const contentSections = parseContent(post.fullContent)
 
   return (
     <>
       <Helmet>
-        <title>Blogs - Bird Aviary | Bird Articles & Insights</title>
-        <meta name="description" content="Read latest articles, insights, and stories about birds, bird migration, care tips, and conservation efforts." />
-        <meta name="keywords" content="bird blog, bird articles, bird migration, bird care tips, bird conservation" />
+        <title>{post.title} - HK Aviary BD | Blog Details</title>
+        <meta name="description" content={post.fullContent.substring(0, 160)} />
       </Helmet>
-      <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">Bird Blog</h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Latest articles, insights, and stories about the fascinating world of birds
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <article 
-              key={index} 
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-            >
-              <div className="h-48 relative overflow-hidden">
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
-                <div className="absolute bottom-4 right-4 text-white text-sm font-medium bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                  {post.date}
+      <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Button */}
+          <Link 
+            to="/blogs"
+            className="inline-flex items-center text-blue-600 hover:text-orange-500 mb-8 font-semibold transition-colors"
+          >
+            <span className="mr-2">←</span>
+            Back to Blogs
+          </Link>
+
+          {/* Main Image */}
+          <div className="mb-8 rounded-xl overflow-hidden shadow-2xl">
+            <img 
+              src={post.image} 
+              alt={post.title}
+              className="w-full h-96 object-cover"
+            />
+          </div>
+
+          {/* Header */}
+          <div className="bg-white rounded-xl shadow-xl p-8 mb-8">
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              <span className="bg-blue-100 text-blue-600 text-sm font-bold px-4 py-2 rounded-full">
+                {post.category}
+              </span>
+              {post.nfs && (
+                <span className="bg-red-500 text-white text-sm font-bold px-4 py-2 rounded-full">
+                  NFS
+                </span>
+              )}
+              <span className="text-gray-500 text-sm font-medium">
+                {post.date}
+              </span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+              {post.title}
+            </h1>
+          </div>
+
+          {/* Content */}
+          <div className="bg-white rounded-xl shadow-xl p-8 mb-8">
+            <div className="prose prose-lg max-w-none">
+              {contentSections.map((section, index) => (
+                <div key={index} className="mb-8">
+                  {section.type === 'paragraph' && (
+                    <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 whitespace-pre-line">
+                      {section.content}
+                    </p>
+                  )}
+                  {section.type === 'section' && (
+                    <>
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-8 first:mt-0">
+                        {section.heading}
+                      </h2>
+                      <div className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                        {section.content.split('\n').map((line, lineIndex) => {
+                          // Handle bullet points
+                          if (line.startsWith('- ') || line.startsWith('* ')) {
+                            return (
+                              <div key={lineIndex} className="flex items-start mb-2 ml-4">
+                                <span className="text-blue-600 mr-2">•</span>
+                                <span>{line.substring(2)}</span>
+                              </div>
+                            )
+                          }
+                          // Handle bold text
+                          if (line.includes('**')) {
+                            const parts = line.split('**')
+                            return (
+                              <p key={lineIndex} className="mb-4">
+                                {parts.map((part, partIndex) => 
+                                  partIndex % 2 === 1 ? (
+                                    <strong key={partIndex} className="text-gray-900 font-semibold">{part}</strong>
+                                  ) : (
+                                    <span key={partIndex}>{part}</span>
+                                  )
+                                )}
+                              </p>
+                            )
+                          }
+                          return line.trim() ? (
+                            <p key={lineIndex} className="mb-4">{line}</p>
+                          ) : null
+                        })}
+                      </div>
+                    </>
+                  )}
                 </div>
-              </div>
-              <div className="p-6">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">
-                  {post.title}
-                </h2>
-                <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <Link 
-                  to={`/blog/${post.id}`}
-                  className="inline-flex items-center text-blue-600 hover:text-orange-500 font-semibold group-hover:gap-2 transition-all duration-300"
-                >
-                  Read More
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </Link>
-              </div>
-            </article>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
       </div>
     </>
   )
 }
 
-export default Blogs
+export default BlogDetail
 

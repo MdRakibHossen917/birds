@@ -15,11 +15,11 @@ function PrivacyPolicy() {
             <div className="inline-block mb-4">
               <span className="text-5xl">🔒</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
               Privacy <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Policy</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600">
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </div>
@@ -29,8 +29,8 @@ function PrivacyPolicy() {
             <div className="prose prose-lg max-w-none">
               
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Introduction</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">1. Introduction</h2>
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-4">
                   Welcome to HK Aviary BD. We are committed to protecting your personal information and your right to privacy. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
                 </p>
