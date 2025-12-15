@@ -11,6 +11,7 @@ import CookiePolicy from './pages/CookiePolicy.jsx'
 import LoveBirds from './pages/LoveBirds.jsx'
 import LoveBirdDetail from './pages/LoveBirdDetail.jsx'
 import BlogDetail from './pages/BlogDetail.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: '/lovebird/:id',
         element: <LoveBirdDetail />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
       },
     ],
   },

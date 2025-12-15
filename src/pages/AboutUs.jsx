@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { FaFacebook, FaArrowRight } from 'react-icons/fa'
 
 function AboutUs() {
   return (
@@ -106,79 +107,6 @@ function AboutUs() {
             </ul>
           </div>
           
-          <div className="bg-gradient-to-br from-blue-600 to-orange-500 rounded-xl shadow-xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            {/* Facebook Page Details */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
-              <h4 className="text-xl sm:text-2xl font-bold mb-4 flex items-center gap-3">
-                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-                Connect on Facebook
-              </h4>
-              <p className="text-sm sm:text-base md:text-lg mb-4 leading-relaxed text-blue-50">
-                Follow our Facebook page to stay updated with the latest news, photos, and updates from HK Aviary BD. 
-                Join our growing community of bird enthusiasts and get exclusive content directly on Facebook.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start">
-                  <span className="text-orange-300 mr-3 text-xl">✓</span>
-                  <p className="text-sm sm:text-base text-blue-50">Get latest updates about our lovebirds and breeding program</p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-orange-300 mr-3 text-xl">✓</span>
-                  <p className="text-sm sm:text-base text-blue-50">View photos and videos of our champion birds</p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-orange-300 mr-3 text-xl">✓</span>
-                  <p className="text-sm sm:text-base text-blue-50">Connect with other bird lovers and share experiences</p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-orange-300 mr-3 text-xl">✓</span>
-                  <p className="text-sm sm:text-base text-blue-50">Receive exclusive offers and announcements</p>
-                </div>
-              </div>
-            </div>
-
-            <a
-              href="https://www.facebook.com/profile.php?id=100078258962488"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-3"
-            >
-              <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-              <span className="text-lg sm:text-xl">Visit Our Facebook Page</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Social Media Section */}
-        <div className="bg-white rounded-xl shadow-xl p-10 mb-12 border border-gray-100">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">Connect With Us</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto"></div>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
-              Stay updated with our latest news, bird care tips, and community updates by following us on social media.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <a
-              href="https://www.facebook.com/profile.php?id=100078258962488"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-blue-600 text-white px-10 py-5 rounded-full font-bold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-3"
-            >
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-              <span className="text-lg sm:text-xl">Visit Our Facebook Page</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-        </div>
-
         {/* Founder/Owner Section */}
         <div className="bg-white rounded-xl shadow-xl p-10 mb-12 border border-gray-100">
           <div className="text-center mb-8">
@@ -191,22 +119,31 @@ function AboutUs() {
               <div className="mb-6 flex justify-center">
                 <div className="relative">
                   <img 
-                    src="https://i.ibb.co.com/Kc43XtLf/513957320-719384884013471-1840928253361452718-n.jpg" 
-                    alt="Md. Humaiyun Kabir - Founder"
+                    src="https://i.ibb.co.com/YG4gws5/494153409-9884930344901665-460183963572042607-n.jpg" 
+                    alt="Humayoun Kabir Hemo - Founder"
                     className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-xl"
                   />
                 </div>
               </div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-3">Md. Humaiyun Kabir</h4>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Humayoun Kabir Hemo</h4>
               <p className="text-lg text-gray-700 font-semibold mb-2">Ground Services Assistant</p>
               <p className="text-lg text-blue-600 font-semibold mb-3">Biman Bangladesh Airlines</p>
               <p className="text-base text-gray-600 mb-6">Dhaka, Bangladesh</p>
               <div className="border-t border-gray-300 pt-6 mt-6">
-                <p className="text-base text-gray-700 leading-relaxed">
-                  Humaiyun ground services assistant organization at Biman Bangladesh Airlines, Bangladesh. 
+                <p className="text-base text-gray-700 leading-relaxed mb-6">
+                  Humayoun Kabir Hemo, ground services assistant organization at Biman Bangladesh Airlines, Bangladesh. 
                   Passionate about lovebird breeding and dedicated to producing high-quality champion birds 
                   through careful breeding and genetic excellence.
                 </p>
+                <a
+                  href="https://www.facebook.com/Hemo057"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  <FaFacebook className="w-5 h-5" />
+                  Connect on Facebook
+                </a>
               </div>
             </div>
 
@@ -215,8 +152,8 @@ function AboutUs() {
               <div className="flex-shrink-0 mr-8">
                 <div className="relative">
                   <img 
-                    src="https://i.ibb.co.com/Kc43XtLf/513957320-719384884013471-1840928253361452718-n.jpg" 
-                    alt="Md. Humaiyun Kabir - Founder"
+                    src="https://i.ibb.co.com/YG4gws5/494153409-9884930344901665-460183963572042607-n.jpg" 
+                    alt="Humayoun Kabir Hemo - Founder"
                     className="w-56 h-56 lg:w-72 lg:h-72 rounded-xl object-cover border-4 border-white shadow-2xl"
                   />
                   <div className="absolute inset-0 rounded-xl border-4 border-blue-500 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -224,7 +161,7 @@ function AboutUs() {
               </div>
               <div className="flex-1 flex flex-col justify-center">
                 <div className="mb-4">
-                  <h4 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 mb-2">Md. Humaiyun Kabir</h4>
+                  <h4 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 mb-2">Humayoun Kabir Hemo</h4>
                   <p className="text-sm lg:text-base text-blue-600 font-semibold mb-1">- Founder</p>
             </div>
                 <div className="space-y-2 mb-6">
@@ -239,11 +176,20 @@ function AboutUs() {
                   </p>
                 </div>
                 <div className="border-t border-gray-300 pt-4">
-                  <p className="text-sm lg:text-base xl:text-lg text-gray-700 leading-relaxed">
-                    Humaiyun ground services assistant organization at Biman Bangladesh Airlines, Bangladesh. 
+                  <p className="text-sm lg:text-base xl:text-lg text-gray-700 leading-relaxed mb-6">
+                    Humayoun Kabir Hemo, ground services assistant organization at Biman Bangladesh Airlines, Bangladesh. 
                     Passionate about lovebird breeding and dedicated to producing high-quality champion birds 
                     through careful breeding and genetic excellence.
                   </p>
+                  <a
+                    href="https://www.facebook.com/Hemo057"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    <FaFacebook className="w-5 h-5" />
+                    Connect on Facebook
+                  </a>
                 </div>
               </div>
             </div>
