@@ -143,15 +143,15 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
         <meta name="keywords" content="bird blog, bird articles, bird migration, bird care tips, bird conservation" />
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">Bird Blog</h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+        <div className="text-center mb-12 md:mb-16">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">Bird Blog</h1>
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Latest articles, insights, and stories about the fascinating world of birds
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {blogPosts.map((post, index) => (
             <article 
               key={index} 
@@ -168,16 +168,16 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
                   {post.date}
                 </div>
               </div>
-              <div className="p-6">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">
+              <div className="p-5 md:p-6">
+                <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-3 md:mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">
                   {post.title}
                 </h2>
-                <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed line-clamp-3">
+                <p className="text-sm md:text-base lg:text-lg text-gray-600 mb-5 md:mb-6 leading-relaxed line-clamp-3">
                   {post.excerpt}
                 </p>
                 <Link 
                   to={`/blog/${post.id}`}
-                  className="inline-flex items-center text-blue-600 hover:text-orange-500 font-semibold group-hover:gap-2 transition-all duration-300"
+                  className="inline-flex items-center text-sm md:text-base text-blue-600 hover:text-orange-500 font-semibold group-hover:gap-2 transition-all duration-300"
                 >
                   Read More
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>

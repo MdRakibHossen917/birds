@@ -19,26 +19,26 @@ function Navbar() {
     <>
       <nav className="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo on left side */}
             <div className="flex items-center">
-              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-blue-600 hover:text-orange-500 transition-all duration-300 flex items-center gap-3">
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-2xl font-bold text-blue-600 hover:text-orange-500 transition-all duration-300 flex items-center gap-2 md:gap-3">
                 <img 
                   src="/logo.png" 
                   alt="HK Aviary BD Logo" 
-                  className="h-12 w-auto object-contain"
+                  className="h-10 md:h-12 w-auto object-contain"
                 />
-                <span>HK Aviary BD</span>
+                <span className="hidden sm:inline">HK Aviary BD</span>
               </Link>
             </div>
             
             {/* Desktop Navigation links on right side */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
               {navLinks.map(link => (
                 <Link 
                   key={link.path}
                   to={link.path} 
-                  className={`relative font-semibold transition-all duration-300 ${
+                  className={`relative font-semibold text-base lg:text-lg transition-all duration-300 ${
                     isActive(link.path) 
                       ? 'text-blue-600' 
                       : 'text-gray-700 hover:text-blue-600'
@@ -54,10 +54,10 @@ function Navbar() {
                 href="https://wa.me/8801737149420"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2"
+                className="bg-green-500 text-white px-5 lg:px-6 py-2 md:py-2.5 rounded-full font-semibold text-sm md:text-base hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2"
               >
-                <FaWhatsapp className="w-5 h-5" />
-                WhatsApp
+                <FaWhatsapp className="w-4 h-4 md:w-5 md:h-5" />
+                <span className="hidden lg:inline">WhatsApp</span>
               </a>
             </div>
 

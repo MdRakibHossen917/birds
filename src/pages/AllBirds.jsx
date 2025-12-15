@@ -29,40 +29,40 @@ function AllBirds() {
         <meta name="description" content="Explore our complete collection of bird species from around the world. Learn about different birds, their habitats, diets, and characteristics." />
         <meta name="keywords" content="all birds, bird species, bird collection, bird database, types of birds" />
       </Helmet>
-      <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12">
+      <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
+          <div className="text-center mb-10 md:mb-12 lg:mb-16">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">
               All <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Bird Species</span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-4 md:mb-6"></div>
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Explore our complete collection of fascinating bird species from around the world
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
             {allBirds.map((bird, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                className="group bg-white rounded-xl shadow-lg p-5 md:p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
               >
-                <div className="text-center mb-4">
-                  <div className="text-6xl mb-3 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="text-center mb-4 md:mb-5">
+                  <div className="text-5xl md:text-6xl mb-2 md:mb-3 transform group-hover:scale-110 transition-transform duration-300">
                     {bird.emoji}
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">
                     {bird.name}
                   </h3>
                 </div>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base mb-4 leading-relaxed">{bird.description}</p>
-                <div className="space-y-2 text-xs sm:text-sm md:text-base">
+                <p className="text-gray-600 text-sm md:text-base mb-4 md:mb-5 leading-relaxed">{bird.description}</p>
+                <div className="space-y-2 text-sm md:text-base">
                   <div className="flex items-start">
-                    <span className="text-blue-600 font-semibold mr-2 min-w-[60px]">Habitat:</span>
+                    <span className="text-blue-600 font-semibold mr-2 min-w-[70px] md:min-w-[80px]">Habitat:</span>
                     <span className="text-gray-600">{bird.habitat}</span>
                   </div>
                   <div className="flex items-start">
-                    <span className="text-orange-500 font-semibold mr-2 min-w-[60px]">Diet:</span>
+                    <span className="text-orange-500 font-semibold mr-2 min-w-[70px] md:min-w-[80px]">Diet:</span>
                     <span className="text-gray-600">{bird.diet}</span>
                   </div>
                 </div>

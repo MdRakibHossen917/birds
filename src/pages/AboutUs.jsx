@@ -11,58 +11,58 @@ function AboutUs() {
         <link rel="icon" type="image/png" href="/fav.png" />
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">
             About <span className="text-blue-600">HK Aviary BD</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
             We are passionate about birds and dedicated to providing comprehensive information 
             about bird species, their care, habitats, and conservation.
           </p>
         </div>
 
         {/* Mission Section */}
-        <div className="bg-white rounded-xl shadow-xl p-10 mb-12 border border-gray-100">
-          <div className="mb-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Our Mission</h2>
+        <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 lg:p-10 mb-8 md:mb-10 lg:mb-12 border border-gray-100">
+          <div className="mb-5 md:mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">Our Mission</h2>
           </div>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
             At Bird Aviary, our mission is to educate and inspire bird enthusiasts while promoting 
             the protection and well-being of birds worldwide. We believe that through knowledge and 
             community, we can make a significant impact on bird conservation and appreciation.
           </p>
           
-          <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl p-6">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-6">What We Do</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl p-5 md:p-6 lg:p-8">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-5 md:mb-6">What We Do</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">✓</div>
+                <div className="bg-blue-600 text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 text-xs md:text-sm font-bold">✓</div>
                 <div>
-                  <h4 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-1">Species Information</h4>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600">Detailed information about various bird species from around the world</p>
+                  <h4 className="text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 md:mb-2">Species Information</h4>
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600">Detailed information about various bird species from around the world</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">✓</div>
+                <div className="bg-orange-500 text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 text-xs md:text-sm font-bold">✓</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">Expert Advice</h4>
-                  <p className="text-gray-600">Share expert advice on bird care, feeding, and housing</p>
+                  <h4 className="text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 md:mb-2">Expert Advice</h4>
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600">Share expert advice on bird care, feeding, and housing</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">✓</div>
+                <div className="bg-blue-600 text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 text-xs md:text-sm font-bold">✓</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">Educational Content</h4>
-                  <p className="text-gray-600">Publish educational articles about bird behavior and habitats</p>
+                  <h4 className="text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 md:mb-2">Educational Content</h4>
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600">Publish educational articles about bird behavior and habitats</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">✓</div>
+                <div className="bg-orange-500 text-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 text-xs md:text-sm font-bold">✓</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">Conservation Support</h4>
-                  <p className="text-gray-600">Support bird conservation efforts and raise awareness</p>
+                  <h4 className="text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 md:mb-2">Conservation Support</h4>
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600">Support bird conservation efforts and raise awareness</p>
                 </div>
               </div>
             </div>
@@ -70,24 +70,24 @@ function AboutUs() {
         </div>
 
         {/* Values and Join Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="mb-6">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Our Values</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10 lg:mb-12">
+          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="mb-5 md:mb-6">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Our Values</h3>
             </div>
-            <ul className="space-y-4">
+            <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start">
-                <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold mt-0.5">✓</div>
+                <div className="bg-blue-600 text-white rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-3 flex-shrink-0 text-xs md:text-sm font-bold mt-0.5">✓</div>
                 <div>
-                  <h4 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-1">Conservation</h4>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600">Protection and conservation of bird species worldwide</p>
+                  <h4 className="text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1">Conservation</h4>
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600">Protection and conservation of bird species worldwide</p>
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold mt-0.5">✓</div>
+                <div className="bg-orange-500 text-white rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-3 flex-shrink-0 text-xs md:text-sm font-bold mt-0.5">✓</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">Education</h4>
-                  <p className="text-gray-600">Knowledge sharing and continuous learning</p>
+                  <h4 className="text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1">Education</h4>
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600">Knowledge sharing and continuous learning</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -106,9 +106,10 @@ function AboutUs() {
               </li>
             </ul>
           </div>
+        </div>
           
         {/* Founder/Owner Section */}
-        <div className="bg-white rounded-xl shadow-xl p-10 mb-12 border border-gray-100">
+        <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 lg:p-10 mb-8 md:mb-10 lg:mb-12 border border-gray-100">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">Founder</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto"></div>
