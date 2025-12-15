@@ -7,6 +7,7 @@ function AboutUs() {
         <title>About Us - Bird Aviary | Our Mission & Values</title>
         <meta name="description" content="Learn about Bird Aviary's mission to educate and inspire bird enthusiasts while promoting bird conservation worldwide." />
         <meta name="keywords" content="about bird aviary, bird conservation, bird education, bird community" />
+        <link rel="icon" type="image/png" href="/fav.png" />
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -24,9 +24,7 @@ function Home() {
       {/* Popular Birds Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-5xl">🐦</span>
-          </div>
+          
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
             Popular <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Bird Species</span>
           </h2>
@@ -40,10 +38,10 @@ function Home() {
           {popularBirds.map((bird, index) => (
             <div 
               key={index} 
-              className="group relative bg-white rounded-[2rem] shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden"
+              className="group relative bg-white rounded-[1rem] shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
               {/* Gradient Background on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${bird.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-[2rem]`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${bird.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-[1rem]`}></div>
               
               {/* Icon Container */}
               <div className="relative mb-6">
@@ -93,11 +91,11 @@ function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
+            <div className="group bg-white rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-3xl mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-3xl mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
                     🍎
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800">Feeding</h3>
@@ -123,11 +121,11 @@ function Home() {
               </div>
             </div>
             
-            <div className="group bg-white rounded-[2rem] p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
+            <div className="group bg-white rounded-[1rem] p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-3xl mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-3xl mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
                     🏠
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800">Housing</h3>
@@ -153,7 +151,7 @@ function Home() {
               </div>
             </div>
             
-            <div className="group bg-white rounded-[2rem] p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
+            <div className="group bg-white rounded-[1rem] p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-6">
@@ -183,7 +181,7 @@ function Home() {
               </div>
             </div>
             
-            <div className="group bg-white rounded-[2rem] p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
+            <div className="group bg-white rounded-[1rem] p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-6">

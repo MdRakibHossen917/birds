@@ -4,6 +4,8 @@ import Home from './pages/Home.jsx'
 import Blogs from './pages/Blogs.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import AllBirds from './pages/AllBirds.jsx'
+import Award from './pages/Award.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/blogs',
         element: <Blogs />,
+      },
+      {
+        path: '/award',
+        element: <Award />,
       },
       {
         path: '/about-us',

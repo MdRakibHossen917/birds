@@ -71,6 +71,12 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/award" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                  Award
+                </Link>
+              </li>
+              <li>
                 <Link to="/about-us" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
                   <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                   About us
