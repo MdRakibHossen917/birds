@@ -47,8 +47,8 @@ function LoveBirds() {
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12 lg:mb-16">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">
-              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Lovebirds</span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
+              Lovebirds
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-4 md:mb-6"></div>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
@@ -61,7 +61,7 @@ function LoveBirds() {
               <Link 
                 key={bird.id}
                 to={bird.detailPage}
-                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+                className="group bg-white rounded shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img 
@@ -72,7 +72,7 @@ function LoveBirds() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-5 md:p-6">
-                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-black mb-2 md:mb-3">
                     {bird.name}
                   </h3>
                   <p className="text-xs md:text-sm text-blue-600 font-semibold mb-2 md:mb-3">

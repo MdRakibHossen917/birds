@@ -11,17 +11,15 @@ function NotFound() {
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen flex items-center justify-center py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* 404 Number */}
           <div className="mb-8">
             <h1 className="text-9xl sm:text-[12rem] md:text-[15rem] font-extrabold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent leading-none">
               404
             </h1>
           </div>
 
-          {/* Error Message */}
           <div className="mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
-              Page <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Not Found</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
+              Page Not Found
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 max-w-2xl mx-auto">
               Oops! The page you are looking for doesn't exist or has been moved.
@@ -31,7 +29,6 @@ function NotFound() {
             </p>
           </div>
 
-          {/* Illustration */}
           <div className="mb-12 flex justify-center">
             <div className="relative">
               <div className="text-8xl sm:text-9xl opacity-20">🦅</div>
@@ -41,7 +38,6 @@ function NotFound() {
             </div>
           </div>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               to="/"
@@ -59,7 +55,6 @@ function NotFound() {
             </Link>
           </div>
 
-          {/* Quick Links */}
           <div className="mt-16 pt-12 border-t border-gray-200">
             <p className="text-sm sm:text-base text-gray-600 mb-6">You might be looking for:</p>
             <div className="flex flex-wrap justify-center gap-4">

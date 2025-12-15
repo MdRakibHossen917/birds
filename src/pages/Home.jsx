@@ -5,15 +5,6 @@ import Header from '../components/Header.jsx'
 function Home() {
   const popularBirds = [
     { 
-      name: 'Lovebirds', 
-      image: 'https://i.ibb.co.com/mVYj3Jyy/513972978-719384907346802-5886751649123918036-n.jpg',
-      badge: '2025 Champion',
-      badgeColor: 'bg-yellow-500',
-      description: 'National Loverbird Championship 2025 Winner - Beautiful and affectionate lovebirds perfect for companionship.', 
-      color: 'from-blue-500 to-blue-600',
-      link: '/lovebird/1'
-    },
-    { 
       name: 'Upcoming Champion', 
       image: 'https://i.ibb.co.com/hFdjK7mj/542047303-771751132110179-6116929702425819055-n.jpg',
       badge: 'Title Holder',
@@ -31,6 +22,15 @@ function Home() {
       color: 'from-green-500 to-green-600',
       link: '/lovebird/4'
     },
+    { 
+      name: 'perblue opaline', 
+      image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+      badge: 'Best in Show',
+      badgeColor: 'bg-yellow-500',
+      description: 'Quality perblue opaline baby ( Mango Head)', 
+      color: 'from-purple-500 to-blue-600',
+      link: '/lovebird/5'
+    },
   ]
 
   return (
@@ -43,11 +43,10 @@ function Home() {
       <div className="min-h-screen">
         <Header />
       
-      {/* Popular Birds Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-6 lg:py-6">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">
-            Popular <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Bird Species</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
+            Popular Bird Species
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6 md:mb-8"></div>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
@@ -60,19 +59,16 @@ function Home() {
             <Link
               key={index}
               to={bird.link}
-              className="group relative bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden block"
+              className="group relative bg-white rounded shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden block"
             >
-              {/* Gradient Background on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${bird.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-xl`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${bird.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded`}></div>
               
-              {/* Image Container */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden rounded-t">
                 <img 
                   src={bird.image} 
                   alt={bird.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                {/* Badge */}
                 {bird.badge && (
                   <div className={`absolute top-4 right-4 ${bird.badgeColor} text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transform group-hover:scale-110 transition-transform`}>
                     {bird.badge}
@@ -81,14 +77,13 @@ function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              {/* Content */}
               <div className="relative p-5 md:p-6 lg:p-8">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-3 md:mb-4 text-center group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-black mb-3 md:mb-4 text-center">
                   {bird.name}
                 </h3>
                 <p className="text-sm md:text-base lg:text-lg text-gray-600 text-center leading-relaxed mb-6 md:mb-8 line-clamp-3">{bird.description}</p>
                 <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-blue-600 to-orange-500 text-white font-semibold text-sm md:text-base rounded-full hover:from-blue-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+                  <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-blue-600 to-orange-500 text-white font-semibold text-sm md:text-base rounded-xl hover:from-blue-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
                     View Details
                     <span className="group-hover:translate-x-1 transition-transform">→</span>
                   </div>
@@ -99,16 +94,14 @@ function Home() {
         </div>
       </div>
 
-      {/* Bird Care Tips Section */}
       <div className="bg-gradient-to-br from-gray-50 via-blue-50 to-orange-50 py-16 md:py-20 lg:py-24 relative overflow-hidden">
-        {/* Decorative Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">
-              Bird <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Care Tips</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
+              Bird Care Tips
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6 md:mb-8"></div>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
@@ -117,14 +110,14 @@ function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="group bg-white rounded-xl p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
+            <div className="group bg-white rounded p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-5 md:mb-6">
-                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
                     🍎
                   </div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Feeding</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">Feeding</h3>
                 </div>
                 <ul className="space-y-3 md:space-y-4 text-gray-600">
                   <li className="flex items-start group/item">
@@ -147,14 +140,14 @@ function Home() {
               </div>
             </div>
             
-            <div className="group bg-white rounded-xl p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
+            <div className="group bg-white rounded p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-5 md:mb-6">
-                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
                     🏠
                   </div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Housing</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">Housing</h3>
                 </div>
                 <ul className="space-y-3 md:space-y-4 text-gray-600">
                   <li className="flex items-start group/item">
@@ -177,14 +170,14 @@ function Home() {
               </div>
             </div>
             
-            <div className="group bg-white rounded-xl p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
+            <div className="group bg-white rounded p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-blue-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-5 md:mb-6">
-                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
                     💊
                   </div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Health</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">Health</h3>
                 </div>
                 <ul className="space-y-3 md:space-y-4 text-gray-600">
                   <li className="flex items-start group/item">
@@ -207,14 +200,14 @@ function Home() {
               </div>
             </div>
             
-            <div className="group bg-white rounded-xl p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
+            <div className="group bg-white rounded p-6 md:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-4 border-orange-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative">
                 <div className="flex items-center mb-5 md:mb-6">
-                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded flex items-center justify-center text-2xl md:text-3xl mr-3 md:mr-4 shadow-lg transform group-hover:rotate-6 transition-transform">
                     ❤️
                   </div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Socialization</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">Socialization</h3>
                 </div>
                 <ul className="space-y-3 md:space-y-4 text-gray-600">
                   <li className="flex items-start group/item">

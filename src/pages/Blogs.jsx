@@ -145,7 +145,7 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">Bird Blog</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">Bird Blog</h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Latest articles, insights, and stories about the fascinating world of birds
           </p>
@@ -155,7 +155,7 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
           {blogPosts.map((post, index) => (
             <article 
               key={index} 
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+              className="group bg-white rounded shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
             >
               <div className="h-48 relative overflow-hidden">
                 <img 
@@ -169,7 +169,7 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
                 </div>
               </div>
               <div className="p-5 md:p-6">
-                <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-3 md:mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">
+                <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-black mb-3 md:mb-4 line-clamp-2">
                   {post.title}
                 </h2>
                 <p className="text-sm md:text-base lg:text-lg text-gray-600 mb-5 md:mb-6 leading-relaxed line-clamp-3">

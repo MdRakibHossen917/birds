@@ -136,7 +136,6 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
 
   const post = blogPosts[id] || blogPosts[1]
 
-  // Parse markdown-style content
   const parseContent = (content) => {
     const sections = content.split('\n\n## ').map((section, index) => {
       if (index === 0) {
@@ -163,7 +162,6 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Back Button */}
           <Link 
             to="/blogs"
             className="inline-flex items-center text-blue-600 hover:text-orange-500 mb-8 font-semibold transition-colors"
@@ -172,8 +170,7 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
             Back to Blogs
           </Link>
 
-          {/* Main Image */}
-          <div className="mb-8 rounded-xl overflow-hidden shadow-2xl">
+          <div className="mb-8 rounded overflow-hidden shadow-2xl">
             <img 
               src={post.image} 
               alt={post.title}
@@ -181,8 +178,7 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
             />
           </div>
 
-          {/* Header */}
-          <div className="bg-white rounded-xl shadow-xl p-8 mb-8">
+          <div className="bg-white rounded shadow-xl p-8 mb-8">
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <span className="bg-blue-100 text-blue-600 text-sm font-bold px-4 py-2 rounded-full">
                 {post.category}
@@ -196,13 +192,12 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
                 {post.date}
               </span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-6">
               {post.title}
             </h1>
           </div>
 
-          {/* Content */}
-          <div className="bg-white rounded-xl shadow-xl p-8 mb-8">
+          <div className="bg-white rounded shadow-xl p-8 mb-8">
             <div className="prose prose-lg max-w-none">
               {contentSections.map((section, index) => (
                 <div key={index} className="mb-8">
@@ -213,12 +208,11 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
                   )}
                   {section.type === 'section' && (
                     <>
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-8 first:mt-0">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 mt-8 first:mt-0">
                         {section.heading}
                       </h2>
                       <div className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
                         {section.content.split('\n').map((line, lineIndex) => {
-                          // Handle bullet points
                           if (line.startsWith('- ') || line.startsWith('* ')) {
                             return (
                               <div key={lineIndex} className="flex items-start mb-2 ml-4">
@@ -227,7 +221,6 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
                               </div>
                             )
                           }
-                          // Handle bold text
                           if (line.includes('**')) {
                             const parts = line.split('**')
                             return (

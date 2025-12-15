@@ -10,13 +10,12 @@ function TermsOfService() {
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
           <div className="text-center mb-12">
             <div className="inline-block mb-4">
               <span className="text-5xl">📋</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
-              Terms of <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Service</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-black mb-4">
+              Terms of Service
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-4"></div>
             <p className="text-sm sm:text-base md:text-lg text-gray-600">
@@ -24,12 +23,11 @@ function TermsOfService() {
             </p>
           </div>
 
-          {/* Content */}
-          <div className="bg-white rounded-xl shadow-xl p-8 md:p-12 border border-gray-100">
+          <div className="bg-white rounded shadow-xl p-8 md:p-12 border border-gray-100">
             <div className="prose prose-lg max-w-none">
               
               <section className="mb-8">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">1. Agreement to Terms</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-4">1. Agreement to Terms</h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-4">
                   By accessing or using this website, you agree to be bound by these Terms of Service and all applicable 
                   laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
@@ -41,7 +39,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">2. Use License</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">2. Use License</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Permission is granted to temporarily download one copy of the materials on HK Aviary BD's website for 
                   personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, 
@@ -57,7 +55,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">3. User Accounts</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">3. User Accounts</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   When you create an account with us, you must provide information that is accurate, complete, and current 
                   at all times. You are responsible for safeguarding the password and for all activities that occur under 
@@ -70,7 +68,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">4. Prohibited Uses</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">4. Prohibited Uses</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   You may use our website only for lawful purposes and in accordance with these Terms. You agree not to use the website:
                 </p>
@@ -84,7 +82,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">5. Content</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">5. Content</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Our website allows you to post, link, store, share and otherwise make available certain information, text, 
                   graphics, or other material. You are responsible for the content that you post on or through the website, 
@@ -97,7 +95,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">6. Disclaimer</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">6. Disclaimer</h2>
                 <p className="text-gray-600 leading-relaxed">
                   The materials on HK Aviary BD's website are provided on an 'as is' basis. HK Aviary BD makes no warranties, 
                   expressed or implied, and hereby disclaims and negates all other warranties including without limitation, 
@@ -107,7 +105,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">7. Limitations</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">7. Limitations</h2>
                 <p className="text-gray-600 leading-relaxed">
                   In no event shall HK Aviary BD or its suppliers be liable for any damages (including, without limitation, 
                   damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
@@ -117,7 +115,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">8. Accuracy of Materials</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">8. Accuracy of Materials</h2>
                 <p className="text-gray-600 leading-relaxed">
                   The materials appearing on HK Aviary BD's website could include technical, typographical, or photographic 
                   errors. HK Aviary BD does not warrant that any of the materials on its website are accurate, complete, 
@@ -126,7 +124,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">9. Links</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">9. Links</h2>
                 <p className="text-gray-600 leading-relaxed">
                   HK Aviary BD has not reviewed all of the sites linked to its website and is not responsible for the contents 
                   of any such linked site. The inclusion of any link does not imply endorsement by HK Aviary BD of the site. 
@@ -135,7 +133,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">10. Modifications</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">10. Modifications</h2>
                 <p className="text-gray-600 leading-relaxed">
                   HK Aviary BD may revise these terms of service for its website at any time without notice. By using this 
                   website you are agreeing to be bound by the then current version of these terms of service.
@@ -143,7 +141,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">11. Governing Law</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">11. Governing Law</h2>
                 <p className="text-gray-600 leading-relaxed">
                   These terms and conditions are governed by and construed in accordance with the laws of Bangladesh and you 
                   irrevocably submit to the exclusive jurisdiction of the courts in that location.
@@ -151,7 +149,7 @@ function TermsOfService() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">12. Contact Us</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">12. Contact Us</h2>
                 <p className="text-gray-600 leading-relaxed">
                   If you have any questions about these Terms of Service, please contact us:
                 </p>

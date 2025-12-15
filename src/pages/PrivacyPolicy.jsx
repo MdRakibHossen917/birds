@@ -10,13 +10,12 @@ function PrivacyPolicy() {
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
           <div className="text-center mb-12">
             <div className="inline-block mb-4">
               <span className="text-5xl">🔒</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
-              Privacy <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Policy</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-black mb-4">
+              Privacy Policy
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-4"></div>
             <p className="text-sm sm:text-base md:text-lg text-gray-600">
@@ -24,12 +23,11 @@ function PrivacyPolicy() {
             </p>
           </div>
 
-          {/* Content */}
-          <div className="bg-white rounded-xl shadow-xl p-8 md:p-12 border border-gray-100">
+          <div className="bg-white rounded shadow-xl p-8 md:p-12 border border-gray-100">
             <div className="prose prose-lg max-w-none">
               
               <section className="mb-8">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">1. Introduction</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-4">1. Introduction</h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-4">
                   Welcome to HK Aviary BD. We are committed to protecting your personal information and your right to privacy. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
@@ -41,7 +39,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">2. Information We Collect</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">2. Information We Collect</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   We may collect information about you in a variety of ways. The information we may collect on the site includes:
                 </p>
@@ -54,7 +52,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">3. How We Use Your Information</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">3. How We Use Your Information</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   We use the information we collect to:
                 </p>
@@ -69,7 +67,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">4. Data Security</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">4. Data Security</h2>
                 <p className="text-gray-600 leading-relaxed">
                   We use administrative, technical, and physical security measures to help protect your personal information. 
                   While we have taken reasonable steps to secure the personal information you provide to us, please be aware 
@@ -79,7 +77,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">5. Your Privacy Rights</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">5. Your Privacy Rights</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Depending on your location, you may have the following rights regarding your personal information:
                 </p>
@@ -94,7 +92,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">6. Cookies and Tracking Technologies</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">6. Cookies and Tracking Technologies</h2>
                 <p className="text-gray-600 leading-relaxed">
                   We may use cookies and similar tracking technologies to track activity on our website and store certain information. 
                   You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, 
@@ -103,7 +101,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">7. Third-Party Services</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">7. Third-Party Services</h2>
                 <p className="text-gray-600 leading-relaxed">
                   Our website may contain links to third-party websites and services. We are not responsible for the privacy 
                   practices of these third parties. We encourage you to read their privacy policies.
@@ -111,7 +109,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">8. Changes to This Privacy Policy</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">8. Changes to This Privacy Policy</h2>
                 <p className="text-gray-600 leading-relaxed">
                   We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new 
                   Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy 
@@ -120,7 +118,7 @@ function PrivacyPolicy() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">9. Contact Us</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">9. Contact Us</h2>
                 <p className="text-gray-600 leading-relaxed">
                   If you have any questions about this Privacy Policy, please contact us:
                 </p>

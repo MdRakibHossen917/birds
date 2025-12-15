@@ -201,6 +201,58 @@ function LoveBirdDetail() {
         'Gradually introduce solid foods',
         'Regular health check-ups with avian veterinarian'
       ]
+    },
+    5: {
+      name: 'Quality perblue opaline baby ( Mango Head)',
+      mainImage: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+      angles: [
+        {
+          image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+          description: 'Head View',
+          zoomFocus: 'head',
+          position: { x: '50%', y: '20%' }
+        },
+        {
+          image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+          description: 'Wing View',
+          zoomFocus: 'wing',
+          position: { x: '30%', y: '40%' }
+        },
+        {
+          image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+          description: 'Side View',
+          zoomFocus: 'beak-leg',
+          position: { x: '50%', y: '70%' }
+        }
+      ],
+      specifications: {
+        'Common Name': 'Quality perblue opaline baby ( Mango Head)',
+        'Scientific Name': 'Agapornis',
+        'Achievement': 'Best in Show - 2025 Champion',
+        'Lifespan': '10-15 years',
+        'Size': '13-17 cm (5-7 inches)',
+        'Weight': '40-60 grams',
+        'Colors': 'Perblue Opaline with Mango Head',
+        'Temperament': 'Affectionate, Social, Active, Playful',
+        'Diet': 'Seeds, fruits, vegetables, pellets',
+        'Habitat': 'Domesticated, originally from Africa',
+        'Cage Size': 'Minimum 24" x 18" x 18"',
+        'Breeding Season': 'Year-round in captivity',
+        'Eggs per Clutch': '4-6 eggs',
+        'Incubation Period': '21-23 days',
+        'Mutation': 'Perblue Opaline',
+        'Special Feature': 'Mango Head coloring'
+      },
+      care: [
+        'Provide daily social interaction and playtime',
+        'Offer a variety of fresh fruits and vegetables',
+        'Ensure cage has multiple perches of different sizes',
+        'Provide toys for mental stimulation',
+        'Allow daily flight time outside cage',
+        'Maintain clean environment and fresh water',
+        'Regular health check-ups with avian veterinarian',
+        'Special attention to color-enhancing nutrition for perblue mutation'
+      ]
     }
   }
 
@@ -214,7 +266,6 @@ function LoveBirdDetail() {
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Back Button */}
           <Link 
             to="/lovebirds"
             className="inline-flex items-center text-blue-600 hover:text-orange-500 mb-8 font-semibold transition-colors"
@@ -223,19 +274,16 @@ function LoveBirdDetail() {
             Back to Lovebirds
           </Link>
 
-          {/* Main Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4">
-              {bird.name} <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Details</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-black mb-4">
+              {bird.name} Details
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto"></div>
           </div>
 
-          {/* Full View on Left, Zoomed Views on Right */}
-          <div className="bg-white rounded-xl shadow-xl p-6 mb-8 overflow-hidden">
+          <div className="bg-white rounded shadow-xl p-6 mb-8 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Left Side - Main Full Image */}
-              <div className="rounded-xl overflow-hidden relative group">
+              <div className="rounded overflow-hidden relative group">
                 {activeView === 'full' ? (
                   <img 
                     src={bird.mainImage} 
@@ -286,16 +334,14 @@ function LoveBirdDetail() {
                 </div>
               </div>
 
-              {/* Right Side - 2 Zoomed Views */}
               <div className="space-y-4">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                  <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Zoomed Views</span>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-4">
+                  Zoomed Views
                 </h2>
                 
-                {/* Face/Head Zoom View */}
                 <div 
                   onClick={() => setActiveView('face-head')}
-                  className={`rounded-xl overflow-hidden relative group cursor-pointer border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${activeView === 'face-head' ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-200 hover:border-blue-500'}`}
+                  className={`rounded overflow-hidden relative group cursor-pointer border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${activeView === 'face-head' ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-200 hover:border-blue-500'}`}
                 >
                   <div 
                     className="w-full h-64 rounded-lg overflow-hidden relative"
@@ -313,10 +359,9 @@ function LoveBirdDetail() {
                   </div>
                 </div>
 
-                {/* Wings & Leg Zoom View */}
                 <div 
                   onClick={() => setActiveView('wings-leg')}
-                  className={`rounded-xl overflow-hidden relative group cursor-pointer border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${activeView === 'wings-leg' ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-200 hover:border-blue-500'}`}
+                  className={`rounded overflow-hidden relative group cursor-pointer border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${activeView === 'wings-leg' ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-200 hover:border-blue-500'}`}
                 >
                   <div 
                     className="w-full h-64 rounded-lg overflow-hidden relative"
@@ -334,10 +379,9 @@ function LoveBirdDetail() {
                   </div>
                 </div>
 
-                {/* Beak & Leg Zoom View */}
                 <div 
                   onClick={() => setActiveView('beak-leg')}
-                  className={`rounded-xl overflow-hidden relative group cursor-pointer border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${activeView === 'beak-leg' ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-200 hover:border-blue-500'}`}
+                  className={`rounded overflow-hidden relative group cursor-pointer border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${activeView === 'beak-leg' ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-200 hover:border-blue-500'}`}
                 >
                   <div 
                     className="w-full h-64 rounded-lg overflow-hidden relative"
@@ -358,12 +402,10 @@ function LoveBirdDetail() {
             </div>
           </div>
 
-          {/* Specifications and Details */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            {/* Specifications */}
-            <div className="bg-white rounded-xl shadow-xl p-8">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Specifications</span>
+            <div className="bg-white rounded shadow-xl p-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-6">
+                Specifications
               </h2>
               <div className="space-y-4">
                 {Object.entries(bird.specifications).map(([key, value]) => (
@@ -381,10 +423,9 @@ function LoveBirdDetail() {
               </div>
             </div>
 
-            {/* Care Guide */}
-            <div className="bg-white rounded-xl shadow-xl p-8">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Care Guide</span>
+            <div className="bg-white rounded shadow-xl p-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-6">
+                Care Guide
               </h2>
               <ul className="space-y-4">
                 {bird.care.map((item, index) => (
@@ -401,14 +442,13 @@ function LoveBirdDetail() {
             </div>
           </div>
 
-          {/* Additional Information */}
-          <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl shadow-xl p-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
-              Additional <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Information</span>
+          <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded shadow-xl p-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-6 text-center">
+              Additional Information
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">About Lovebirds</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-black mb-3">About Lovebirds</h3>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                   Lovebirds are small, social parrots native to Africa. They are known for their affectionate behavior 
                   and strong pair bonds. These intelligent birds require social interaction and mental stimulation to thrive. 
@@ -416,7 +456,7 @@ function LoveBirdDetail() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Why Choose Lovebirds?</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-black mb-3">Why Choose Lovebirds?</h3>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                   Lovebirds make excellent companions due to their playful nature and ability to bond closely with their owners. 
                   They are relatively easy to care for and don't require as much space as larger parrots. Their vibrant colors 

@@ -32,8 +32,8 @@ function AllBirds() {
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12 lg:mb-16">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-800 mb-4 md:mb-6">
-              All <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Bird Species</span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
+              All <span className="text-orange-500">Bird Species</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-4 md:mb-6"></div>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
@@ -45,13 +45,13 @@ function AllBirds() {
             {allBirds.map((bird, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl shadow-lg p-5 md:p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                className="group bg-white rounded shadow-lg p-5 md:p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
               >
                 <div className="text-center mb-4 md:mb-5">
                   <div className="text-5xl md:text-6xl mb-2 md:mb-3 transform group-hover:scale-110 transition-transform duration-300">
                     {bird.emoji}
                   </div>
-                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-black mb-2 md:mb-3">
                     {bird.name}
                   </h3>
                 </div>
