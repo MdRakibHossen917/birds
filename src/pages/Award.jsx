@@ -147,10 +147,10 @@ function Award() {
             {awards.map((award) => (
               <div 
                 key={award.id}
-                className="group relative bg-white rounded-[1rem] shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden"
+                className="group relative bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden"
               >
                 {/* Gradient Background on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-[1rem]`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`}></div>
                 
                 {/* Award Icon */}
                 <div className="relative mb-6">
@@ -192,7 +192,7 @@ function Award() {
           </div>
 
           {/* Certifications Section */}
-          <div className="bg-gradient-to-br from-gray-50 via-blue-50 to-orange-50 rounded-[2rem] p-12 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-gray-50 via-blue-50 to-orange-50 rounded-xl p-12 relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>

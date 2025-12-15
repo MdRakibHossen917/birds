@@ -45,7 +45,7 @@ function AllBirds() {
             {allBirds.map((bird, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-[2rem] shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                className="group bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
               >
                 <div className="text-center mb-4">
                   <div className="text-6xl mb-3 transform group-hover:scale-110 transition-transform duration-300">

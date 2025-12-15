@@ -1,11 +1,13 @@
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createBrowserRouter } from 'react-router'
 import RootLayouts from './layouts/RootLayouts.jsx'
 import Home from './pages/Home.jsx'
 import Blogs from './pages/Blogs.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import AllBirds from './pages/AllBirds.jsx'
 import Award from './pages/Award.jsx'
-
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import TermsOfService from './pages/TermsOfService.jsx'
+import CookiePolicy from './pages/CookiePolicy.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,18 @@ const router = createBrowserRouter([
       {
         path: '/about-us',
         element: <AboutUs />,
+      },
+      {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: '/terms-of-service',
+        element: <TermsOfService />,
+      },
+      {
+        path: '/cookie-policy',
+        element: <CookiePolicy />,
       },
     ],
   },

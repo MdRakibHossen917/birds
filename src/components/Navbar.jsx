@@ -45,7 +45,7 @@ function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://wa.me/8801300981501"
+                href="https://wa.me/8801737149420"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2"
@@ -147,7 +147,7 @@ function Navbar() {
           {/* Menu Footer */}
           <div className="p-6 border-t border-gray-200">
             <a
-              href="https://wa.me/8801300981501"
+              href="https://wa.me/8801737149420"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}

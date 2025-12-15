@@ -60,7 +60,7 @@ function Blogs() {
           {blogPosts.map((post, index) => (
             <article 
               key={index} 
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
             >
               <div className="h-48 bg-gradient-to-br from-blue-500 to-orange-500 relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>

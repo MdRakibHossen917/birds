@@ -97,15 +97,15 @@ function Footer() {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start">
                 <span className="mr-3">📧</span>
-                <span>info@birdaviary.com</span>
+                <a href="mailto:hkaviarybd@gmail.com" className="hover:text-white transition-colors">hkaviarybd@gmail.com</a>
               </li>
               <li className="flex items-start">
                 <span className="mr-3">📞</span>
-                <span>+1 (234) 567-890</span>
+                <a href="tel:+8801737149420" className="hover:text-white transition-colors">01737-149420</a>
               </li>
               <li className="flex items-start">
                 <span className="mr-3">📍</span>
-                <span>123 Bird Street, Nature City, NC 12345</span>
+                <span>Holan, Samsu Garage, Dhaka, Bangladesh</span>
               </li>
             </ul>
           </div>
@@ -136,9 +136,9 @@ function Footer() {
               &copy; {new Date().getFullYear()} Bird Aviary. All rights reserved.
             </p>
             <div className="flex space-x-6 text-gray-400 text-sm">
-              <a href="#" className="hover:text-white transition">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition">Terms of Service</a>
-              <a href="#" className="hover:text-white transition">Cookie Policy</a>
+              <Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-white transition">Terms of Service</Link>
+              <Link to="/cookie-policy" className="hover:text-white transition">Cookie Policy</Link>
             </div>
           </div>
         </div>
