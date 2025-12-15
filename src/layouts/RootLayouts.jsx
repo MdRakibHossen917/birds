@@ -19,7 +19,7 @@ function RootLayouts() {
       </div>
       <Footer />
       
-      <div className="fixed top-[85%] right-4 z-50">
+      <div className="fixed top-[85%] right-4 z-50 md:hidden">
         <a
           href="https://wa.me/8801737149420"
           target="_blank"
