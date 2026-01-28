@@ -9,7 +9,6 @@ function Navbar() {
   
   const isActive = (path) => location.pathname === path
   const navLinks = [
-    { path: '/', label: 'Home' },
     { path: '/blogs', label: 'Blogs' },
     { path: '/award', label: 'Award' },
     { path: '/about-us', label: 'About us' }
