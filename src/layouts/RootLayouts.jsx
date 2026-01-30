@@ -19,7 +19,7 @@ function RootLayouts() {
       </div>
       <Footer />
       
-      <div className="fixed top-[73%] right-4 z-50 md:hidden animate-pulse-ring">
+      <div className="fixed top-[43%] right-4 z-50 md:hidden animate-pulse-ring">
         <a
           href="https://wa.me/8801737149420"
           target="_blank"
