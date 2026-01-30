@@ -1,8 +1,19 @@
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router'
+import { useState, useEffect } from 'react'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function BlogDetail() {
   const { id } = useParams()
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [id])
   
   const blogPosts = {
     1: {
@@ -170,6 +181,17 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
             Back to Blogs
           </Link>
 
+          {loading ? (
+            <div>
+              <SkeletonLoader type="gallery" count={1} className="mb-8" />
+              <div className="bg-white rounded shadow-xl p-8">
+                <SkeletonLoader type="header" count={1} className="mb-6" />
+                <SkeletonLoader type="text" count={1} className="mb-8" />
+                <SkeletonLoader type="text" count={3} />
+              </div>
+            </div>
+          ) : (
+            <>
           <div className="mb-8 rounded overflow-hidden shadow-2xl">
             <img 
               src={post.image} 
@@ -246,6 +268,8 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
               ))}
             </div>
           </div>
+            </>
+          )}
         </div>
       </div>
     </>

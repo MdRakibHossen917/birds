@@ -1,6 +1,17 @@
 import { Helmet } from 'react-helmet-async'
+import { useState, useEffect } from 'react'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function AllBirds() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1200)
+    return () => clearTimeout(timer)
+  }, [])
+
   const allBirds = [
     { name: 'Parrot', emoji: '🦜', description: 'Colorful and intelligent birds known for their ability to mimic sounds.', habitat: 'Tropical regions', diet: 'Seeds, fruits, nuts' },
     { name: 'Eagle', emoji: '🦅', description: 'Majestic birds of prey with incredible vision and hunting skills.', habitat: 'Mountains, forests', diet: 'Small mammals, fish' },
@@ -41,6 +52,11 @@ function AllBirds() {
             </p>
           </div>
 
+          {loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
+              <SkeletonLoader type="card" count={18} />
+            </div>
+          ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
             {allBirds.map((bird, index) => (
               <div
@@ -69,6 +85,7 @@ function AllBirds() {
               </div>
             ))}
           </div>
+          )}
         </div>
       </div>
     </>

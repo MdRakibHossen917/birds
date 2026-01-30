@@ -1,10 +1,12 @@
 import { Helmet } from 'react-helmet-async'
 import { useState, useEffect } from 'react'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function Award() {
   const [yearsCount, setYearsCount] = useState(0)
   const [awardsCount, setAwardsCount] = useState(0)
   const [certificationsCount, setCertificationsCount] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   const awards = [
     {
@@ -91,6 +93,10 @@ function Award() {
   ]
 
   useEffect(() => {
+    const loadingTimer = setTimeout(() => {
+      setLoading(false)
+    }, 1200)
+
     const duration = 20000
     const steps = 60
     const interval = duration / steps
@@ -116,6 +122,11 @@ function Award() {
       }
     }, interval)
 
+    return () => {
+      clearInterval(timer)
+      clearTimeout(loadingTimer)
+    }
+
     return () => clearInterval(timer)
   }, [awards.length, certifications.length])
 
@@ -126,6 +137,18 @@ function Award() {
         <meta name="description" content="Explore our awards, certifications, and achievements in bird care, conservation, and aviculture excellence. Recognized leaders in avian welfare and education." />
         <meta name="keywords" content="awards, certifications, bird care awards, aviary excellence, avian conservation, bird breeding certification" />
       </Helmet>
+      {loading ? (
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <SkeletonLoader type="header" count={1} />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <SkeletonLoader type="card" count={6} />
+            </div>
+          </div>
+        </div>
+      ) : (
       <div className="min-h-screen">
         <div 
           className="relative text-white overflow-visible award-hero-bg"
@@ -361,6 +384,7 @@ function Award() {
           </div>
         </div>
       </div>
+      )}
     </>
   )
 }

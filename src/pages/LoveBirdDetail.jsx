@@ -1,10 +1,20 @@
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function LoveBirdDetail() {
   const { id } = useParams()
   const [activeView, setActiveView] = useState('full')
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [id])
   
   const loveBirdData = {
     1: {
@@ -430,6 +440,20 @@ function LoveBirdDetail() {
             Back to Lovebirds
           </Link>
 
+          {loading ? (
+            <div>
+              <div className="text-center mb-12">
+                <SkeletonLoader type="header" count={1} />
+              </div>
+              <div className="bg-white rounded shadow-xl p-6 mb-8">
+                <SkeletonLoader type="gallery" count={1} className="mb-6" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <SkeletonLoader type="text" count={2} />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <>
           <div className="text-center mb-12">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-black mb-4">
               {bird.name} Details
@@ -621,6 +645,8 @@ function LoveBirdDetail() {
               </div>
             </div>
           </div>
+            </>
+          )}
         </div>
       </div>
     </>

@@ -1,13 +1,15 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../components/Header.jsx'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function Home() {
   const [loadedImages, setLoadedImages] = useState({})
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX)
@@ -47,6 +49,14 @@ function Home() {
   const handleImageLoad = (imageId) => {
     setLoadedImages(prev => ({ ...prev, [imageId]: true }))
   }
+
+  useEffect(() => {
+    // Simulate content loading
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
 
   const popularBirds = [
     { 
@@ -117,6 +127,15 @@ function Home() {
         <Header />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-6 lg:py-6">
+        {loading ? (
+          <div className="mb-12 md:mb-16">
+            <SkeletonLoader type="header" count={1} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-12">
+              <SkeletonLoader type="card" count={6} />
+            </div>
+          </div>
+        ) : (
+          <>
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
             Popular Bird Species
@@ -166,6 +185,8 @@ function Home() {
             </Link>
           ))}
         </div>
+          </>
+        )}
       </div>
 
       {/* Photo Gallery Slider Section */}
@@ -182,6 +203,12 @@ function Home() {
           </div>
         </div>
         
+        {loading ? (
+          <div className="max-w-6xl mx-auto px-4">
+            <SkeletonLoader type="gallery" count={1} />
+          </div>
+        ) : (
+        <>
         {/* Slider Container */}
         <div className="relative max-w-6xl mx-auto px-4">
           {/* Main Slider */}
@@ -259,9 +286,9 @@ function Home() {
             ))}
           </div>
         </div>
+        </>
+        )}
       </div>
-
-     
 
       <div className="bg-gradient-to-br from-gray-50 via-blue-50 to-orange-50 py-16 md:py-20 lg:py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -477,7 +504,7 @@ function Home() {
           </div>
         </div>
       </div>
-      </div>
+    </div>
     </>
   )
 }

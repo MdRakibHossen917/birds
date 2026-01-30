@@ -1,7 +1,18 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
+import { useState, useEffect } from 'react'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function Blogs() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
   const blogPosts = [
     {
       id: 1,
@@ -151,6 +162,11 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
           </p>
         </div>
         
+        {loading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <SkeletonLoader type="blog" count={3} />
+          </div>
+        ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {blogPosts.map((post, index) => (
             <article 
@@ -186,6 +202,7 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
             </article>
           ))}
         </div>
+        )}
       </div>
       </div>
     </>

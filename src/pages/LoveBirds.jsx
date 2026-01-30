@@ -1,7 +1,18 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
+import { useState, useEffect } from 'react'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function LoveBirds() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1200)
+    return () => clearTimeout(timer)
+  }, [])
+
   const loveBirds = [
     {
       id: 1,
@@ -56,6 +67,11 @@ function LoveBirds() {
             </p>
           </div>
 
+          {loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <SkeletonLoader type="card" count={4} />
+            </div>
+          ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {loveBirds.map((bird) => (
               <Link 
@@ -89,6 +105,7 @@ function LoveBirds() {
               </Link>
             ))}
           </div>
+          )}
         </div>
       </div>
     </>
