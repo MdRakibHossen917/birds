@@ -61,7 +61,7 @@ function Home() {
     },
    { 
   name: 'Green opaline', 
-  image: new URL('../assets/LoveBirds/birds35.jpg', import.meta.url).href,
+  image: new URL('../assets/LoveBirds/Birds35.jpg', import.meta.url).href,
   badge: 'Wild Type',
   badgeColor: 'bg-green-600',
   description: 'Classic wild-type green opaline with a bright orange-red mask and bold white eye-ring', 
@@ -160,7 +160,7 @@ function Home() {
         <div className="relative marquee-container">
           <div className="flex gap-6 animate-marquee whitespace-nowrap">
             {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex gap-6">
+              <div key={setIndex} className="flex gap-4">
                 {galleryImages.map((image, imgIndex) => (
                   <div key={`${setIndex}-${imgIndex}`} className="gallery-card w-80 h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex-shrink-0 relative group cursor-pointer select-none">
                     {/* Love Icon */}
