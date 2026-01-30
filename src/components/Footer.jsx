@@ -43,58 +43,54 @@ function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white">Quick Links</h3>
-            <ul className="space-y-2 md:space-y-3">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/blogs" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link to="/award" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
-                  Award
-                </Link>
-              </li>
-              <li>
-                <Link to="/about-us" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
-                  About us
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
-                  Species Database
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div className="grid grid-cols-2 gap-6 md:gap-10 lg:gap-12 md:col-span-2 lg:col-span-2">
+            <div>
+              <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white">Quick Links</h3>
+              <ul className="space-y-2 md:space-y-3">
+                <li>
+                  <Link to="/" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blogs" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                    Blogs
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/award" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                    Award
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about-us" className="text-gray-400 hover:text-white transition-all duration-300 flex items-center group">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                    About us
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white">Contact Us</h3>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base text-gray-400">
-              <li className="flex items-start">
-                <FaEnvelope className="mr-3 mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
-                <a href="mailto:hkaviarybd@gmail.com" className="hover:text-white transition-colors break-all">hkaviarybd@gmail.com</a>
-              </li>
-              <li className="flex items-start">
-                <FaPhone className="mr-3 mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
-                <a href="tel:+8801737149420" className="hover:text-white transition-colors">01737-149420</a>
-              </li>
-              <li className="flex items-start">
-                <FaMapMarkerAlt className="mr-3 mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
-                <span>Holan, Samsu Garage, Dhaka, Bangladesh</span>
-              </li>
-            </ul>
+            <div>
+              <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white">Contact Us</h3>
+              <ul className="space-y-2 md:space-y-3 text-sm md:text-base text-gray-400">
+                <li className="flex items-start">
+                  <FaEnvelope className="mr-3 mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
+                  <a href="mailto:hkaviarybd@gmail.com" className="hover:text-white transition-colors break-all">hkaviarybd@gmail.com</a>
+                </li>
+                <li className="flex items-start">
+                  <FaPhone className="mr-3 mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
+                  <a href="tel:+8801737149420" className="hover:text-white transition-colors">01737-149420</a>
+                </li>
+                <li className="flex items-start">
+                  <FaMapMarkerAlt className="mr-3 mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
+                  <span>Holan, Samsu Garage, Dhaka</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div>

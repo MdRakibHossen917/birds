@@ -1,14 +1,20 @@
 import { Helmet } from 'react-helmet-async'
 import { FaFacebook, FaArrowRight } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
+import SkeletonLoader from '../components/SkeletonLoader.jsx'
 
 function AboutUs() {
   const [birdSpeciesCount, setBirdSpeciesCount] = useState(0)
   const [activeMembersCount, setActiveMembersCount] = useState(0)
   const [countriesCount, setCountriesCount] = useState(0)
   const [articlesCount, setArticlesCount] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1200)
+
     const duration = 20000
     const steps = 60
     const interval = duration / steps
@@ -37,7 +43,10 @@ function AboutUs() {
       }
     }, interval)
 
-    return () => clearInterval(timer)
+    return () => {
+      clearInterval(timer)
+      clearTimeout(loadingTimer)
+    }
   }, [])
 
   return (
@@ -50,6 +59,32 @@ function AboutUs() {
       </Helmet>
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+        {isLoading ? (
+          <div>
+            <div className="text-center mb-12 md:mb-16">
+              <SkeletonLoader type="header" count={1} />
+            </div>
+            <div className="bg-white rounded shadow-xl p-6 md:p-8 lg:p-10 mb-8 md:mb-10 lg:mb-12 border border-gray-100">
+              <div className="mb-5 md:mb-6">
+                <div className="h-8 md:h-10 bg-gray-300 rounded w-40 md:w-56 animate-pulse"></div>
+              </div>
+              <SkeletonLoader type="text" count={1} className="mb-6" />
+              <div className="bg-gray-50 rounded p-5 md:p-6 lg:p-8">
+                <div className="h-6 md:h-8 bg-gray-300 rounded w-32 md:w-48 mb-6 animate-pulse"></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                  <SkeletonLoader type="text" count={2} />
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded shadow-xl p-10 border border-gray-100">
+              <div className="h-8 md:h-10 bg-gray-300 rounded w-48 mx-auto mb-10 animate-pulse"></div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+                <SkeletonLoader type="card" count={4} />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <>
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
             About HK Aviary BD
@@ -297,6 +332,8 @@ function AboutUs() {
             </div>
           </div>
         </div>
+          </>
+        )}
       </div>
       </div>
     </>

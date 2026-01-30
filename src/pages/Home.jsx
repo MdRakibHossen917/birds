@@ -155,7 +155,7 @@ function Home() {
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${bird.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded`}></div>
               
-              <div className="relative h-64 overflow-hidden rounded-t flex-shrink-0">
+              <div className="relative h-64 overflow-hidden rounded-t flex-shrink-0 shadow-lg shadow-black/10">
                 <img 
                   src={bird.image} 
                   alt={bird.name}

@@ -27,7 +27,10 @@ function Navbar() {
                   alt="HK Aviary BD Logo" 
                   className="h-10 md:h-12 w-auto object-contain"
                 />
-                <span className="inline">HK Aviary BD</span>
+                <span className="inline-flex flex-col leading-tight">
+                  <span>HK Aviary BD</span>
+                  <span className="text-xs md:text-sm font-semibold text-gray-600">Premium Birds</span>
+                </span>
               </Link>
             </div>
             

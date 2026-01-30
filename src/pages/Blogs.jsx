@@ -156,10 +156,19 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">Bird Blog</h1>
-          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-          Inspiring stories and expert insights from the fascinating world of birds.
-          </p>
+          {loading ? (
+            <div className="space-y-4">
+              <div className="h-10 md:h-12 lg:h-14 bg-gray-300 rounded w-56 md:w-72 mx-auto animate-pulse"></div>
+              <div className="h-5 bg-gray-300 rounded w-3/4 mx-auto animate-pulse"></div>
+            </div>
+          ) : (
+            <>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">Bird Blog</h1>
+              <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+              Inspiring stories and expert insights from the fascinating world of birds.
+              </p>
+            </>
+          )}
         </div>
         
         {loading ? (
