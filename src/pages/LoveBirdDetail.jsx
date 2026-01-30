@@ -58,7 +58,7 @@ function LoveBirdDetail() {
     },
     2: {
       name: 'Upcoming Champion - Title Holder',
-      mainImage: 'https://i.ibb.co.com/hFdjK7mj/542047303-771751132110179-6116929702425819055-n.jpg',
+      mainImage: new URL('../assets/LoveBirds/41.jpg', import.meta.url).href,
       angles: [
         {
           image: 'https://i.ibb.co.com/nM5bDmMp/541736819-771776712107621-4979564611869472147-n.jpg',
@@ -154,72 +154,74 @@ function LoveBirdDetail() {
       ]
     },
     4: {
-      name: 'Baby Lovebirds - Next Big Thing',
-      mainImage: 'https://i.ibb.co.com/WNpcbnhT/484012358-642550928363534-4935449803921063486-n.jpg',
+      name: 'Opaline Fischer Violet Pied - Exotic Pair',
+      mainImage: new URL('../assets/LoveBirds/45.jpg', import.meta.url).href,
       angles: [
         {
-          image: 'https://i.ibb.co.com/zHZTCH50/484897377-642552788363348-5330246655922834583-n.jpg',
+          image: new URL('../assets/LoveBirds/45.jpg', import.meta.url).href,
           description: 'Close-up View',
           zoomFocus: 'head',
           position: { x: '50%', y: '20%' }
         },
         {
-          image: 'https://i.ibb.co.com/rVc1CPT/481908573-637099218908705-4380355355270839962-n.jpg',
+          image: new URL('../assets/LoveBirds/45.jpg', import.meta.url).href,
           description: 'Group View',
           zoomFocus: 'wing',
           position: { x: '30%', y: '40%' }
         },
         {
-          image: 'https://i.ibb.co.com/ccymqrw2/523376996-738266118792014-5345568049304194449-n.jpg',
+          image: new URL('../assets/LoveBirds/45.jpg', import.meta.url).href,
           description: 'Side View',
           zoomFocus: 'beak-leg',
           position: { x: '50%', y: '70%' }
         }
       ],
       specifications: {
-        'Common Name': 'Baby Lovebirds',
-        'Scientific Name': 'Agapornis',
-        'Status': 'Next Big Thing - Promising Potential',
+        'Common Name': 'Opaline Fischer Violet Pied',
+        'Scientific Name': 'Agapornis fischeri',
+        'Status': 'Exotic Pair - Stunning Combination',
         'Lifespan': '10-15 years',
-        'Size': '10-13 cm (4-5 inches)',
-        'Weight': '30-45 grams',
-        'Colors': 'Mixed Colors',
-        'Temperament': 'Curious, Playful, Energetic, Learning',
-        'Diet': 'Soft seeds, fruits, vegetables, hand-feeding formula',
-        'Habitat': 'Domesticated, needs special care',
-        'Cage Size': 'Minimum 20" x 16" x 16"',
-        'Age Range': '4-12 weeks old',
-        'Special Care': 'Requires frequent feeding and warmth',
-        'Potential': 'Bright future ahead'
+        'Size': '13-17 cm (5-7 inches)',
+        'Weight': '40-60 grams',
+        'Colors': 'Green Opaline & Violet Pied Mix',
+        'Temperament': 'Affectionate, Social, Playful, Bonded',
+        'Diet': 'Seeds, fruits, vegetables, pellets',
+        'Habitat': 'Domesticated, originally from Africa',
+        'Cage Size': 'Minimum 24" x 18" x 18"',
+        'Breeding Season': 'Year-round in captivity',
+        'Eggs per Clutch': '4-6 eggs',
+        'Incubation Period': '21-23 days',
+        'Special Feature': 'Perfect paired combination'
       },
       care: [
-        'Requires special baby bird care and frequent feeding',
-        'Maintain warm environment (85-90°F)',
-        'Provide soft food and formula if needed',
-        'Ensure proper nest or cozy sleeping area',
-        'Monitor health closely for growth issues',
-        'Gradually introduce solid foods',
-        'Regular health check-ups with avian veterinarian'
+        'Provide daily social interaction and playtime',
+        'Offer a variety of fresh fruits and vegetables',
+        'Ensure cage has multiple perches of different sizes',
+        'Provide toys for mental stimulation',
+        'Allow daily flight time outside cage',
+        'Maintain clean environment and fresh water',
+        'Regular health check-ups with avian veterinarian',
+        'Monitor pair bonding and compatibility'
       ]
     },
     5: {
       name: 'Quality perblue opaline baby ( Mango Head)',
-      mainImage: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+      mainImage: new URL('../assets/LoveBirds/51.jpg', import.meta.url).href,
       angles: [
         {
-          image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+          image: new URL('../assets/LoveBirds/51.jpg', import.meta.url).href,
           description: 'Head View',
           zoomFocus: 'head',
           position: { x: '50%', y: '20%' }
         },
         {
-          image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+          image: new URL('../assets/LoveBirds/51.jpg', import.meta.url).href,
           description: 'Wing View',
           zoomFocus: 'wing',
           position: { x: '30%', y: '40%' }
         },
         {
-          image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+          image: new URL('../assets/LoveBirds/51.jpg', import.meta.url).href,
           description: 'Side View',
           zoomFocus: 'beak-leg',
           position: { x: '50%', y: '70%' }
@@ -252,6 +254,160 @@ function LoveBirdDetail() {
         'Maintain clean environment and fresh water',
         'Regular health check-ups with avian veterinarian',
         'Special attention to color-enhancing nutrition for perblue mutation'
+      ]    },
+    'lutino-fischer': {
+      name: 'Perblue Fisher - Lutino Mutation',
+      mainImage: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href,
+      angles: [
+        {
+          image: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href,
+          description: 'Head View',
+          zoomFocus: 'head',
+          position: { x: '50%', y: '20%' }
+        },
+        {
+          image: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href,
+          description: 'Wing View',
+          zoomFocus: 'wing',
+          position: { x: '30%', y: '40%' }
+        },
+        {
+          image: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href,
+          description: 'Side View',
+          zoomFocus: 'beak-leg',
+          position: { x: '50%', y: '70%' }
+        }
+      ],
+      specifications: {
+        'Common Name': 'Perblue Fisher - Lutino',
+        'Scientific Name': 'Agapornis fischeri',
+        'Mutation': 'Lutino (Yellow Mutation)',
+        'Lifespan': '10-15 years',
+        'Size': '13-17 cm (5-7 inches)',
+        'Weight': '40-60 grams',
+        'Colors': 'Bright Yellow Body with Red Mask',
+        'Temperament': 'Affectionate, Social, Active, Playful',
+        'Diet': 'Seeds, fruits, vegetables, pellets',
+        'Habitat': 'Domesticated, originally from Africa',
+        'Cage Size': 'Minimum 24" x 18" x 18"',
+        'Breeding Season': 'Year-round in captivity',
+        'Eggs per Clutch': '4-6 eggs',
+        'Incubation Period': '21-23 days',
+        'Eye Ring': 'Bold white eye-ring'
+      },
+      care: [
+        'Provide daily social interaction and playtime',
+        'Offer a variety of fresh fruits and vegetables',
+        'Ensure cage has multiple perches of different sizes',
+        'Provide toys for mental stimulation',
+        'Allow daily flight time outside cage',
+        'Maintain clean environment and fresh water',
+        'Regular health check-ups with avian veterinarian',
+        'Color-enhancing nutrition for vibrant plumage'
+      ]
+    },
+    'standard-green': {
+      name: 'Green Opaline - Wild Type',
+      mainImage: new URL('../assets/LoveBirds/Birds35.jpg', import.meta.url).href,
+      angles: [
+        {
+          image: new URL('../assets/LoveBirds/Birds35.jpg', import.meta.url).href,
+          description: 'Head View',
+          zoomFocus: 'head',
+          position: { x: '50%', y: '20%' }
+        },
+        {
+          image: new URL('../assets/LoveBirds/Birds35.jpg', import.meta.url).href,
+          description: 'Wing View',
+          zoomFocus: 'wing',
+          position: { x: '30%', y: '40%' }
+        },
+        {
+          image: new URL('../assets/LoveBirds/Birds35.jpg', import.meta.url).href,
+          description: 'Side View',
+          zoomFocus: 'beak-leg',
+          position: { x: '50%', y: '70%' }
+        }
+      ],
+      specifications: {
+        'Common Name': 'Green Opaline Fischer',
+        'Scientific Name': 'Agapornis fischeri',
+        'Type': 'Wild-Type Green',
+        'Lifespan': '10-15 years',
+        'Size': '13-17 cm (5-7 inches)',
+        'Weight': '40-60 grams',
+        'Colors': 'Vibrant Green with Orange-Red Mask',
+        'Temperament': 'Active, Social, Energetic, Curious',
+        'Diet': 'Seeds, fruits, vegetables, pellets',
+        'Habitat': 'Domesticated, originally from Africa',
+        'Cage Size': 'Minimum 24" x 18" x 18"',
+        'Breeding Season': 'Year-round in captivity',
+        'Eggs per Clutch': '4-6 eggs',
+        'Incubation Period': '21-23 days',
+        'Eye Ring': 'Classic bold white eye-ring'
+      },
+      care: [
+        'Provide daily social interaction and playtime',
+        'Offer a variety of fresh fruits and vegetables',
+        'Ensure cage has multiple perches of different sizes',
+        'Provide toys for mental stimulation',
+        'Allow daily flight time outside cage',
+        'Maintain clean environment and fresh water',
+        'Regular health check-ups with avian veterinarian',
+        'Keep in compatible pairs for best behavior'
+      ]
+    },
+    'parblue-fischer': {
+      name: 'Parblue Fischer - Blue Series Mutation',
+      mainImage: new URL('../assets/LoveBirds/44.jpg', import.meta.url).href,
+      angles: [
+        {
+          image: new URL('../assets/LoveBirds/44.jpg', import.meta.url).href,
+          description: 'Head View',
+          zoomFocus: 'head',
+          position: { x: '50%', y: '20%' }
+        },
+        {
+          image: new URL('../assets/LoveBirds/44.jpg', import.meta.url).href,
+          description: 'Wing View',
+          zoomFocus: 'wing',
+          position: { x: '30%', y: '40%' }
+        },
+        {
+          image: new URL('../assets/LoveBirds/44.jpg', import.meta.url).href,
+          description: 'Side View',
+          zoomFocus: 'beak-leg',
+          position: { x: '50%', y: '70%' }
+        }
+      ],
+      specifications: {
+        'Common Name': 'Parblue Fischer',
+        'Scientific Name': 'Agapornis fischeri',
+        'Mutation': 'Parblue (Partial Blue)',
+        'Lifespan': '10-15 years',
+        'Size': '13-17 cm (5-7 inches)',
+        'Weight': '40-60 grams',
+        'Colors': 'Turquoise/Cobalt Blue with Yellow-Peach Mask',
+        'Temperament': 'Affectionate, Social, Active, Playful',
+        'Diet': 'Seeds, fruits, vegetables, pellets',
+        'Habitat': 'Domesticated, originally from Africa',
+        'Cage Size': 'Minimum 24" x 18" x 18"',
+        'Breeding Season': 'Year-round in captivity',
+        'Eggs per Clutch': '4-6 eggs',
+        'Incubation Period': '21-23 days',
+        'Eye Ring': 'Prominent bold white eye-ring',
+        'Badge': 'Exotic Pastel Mutation'
+      },
+      care: [
+        'Provide daily social interaction and playtime',
+        'Offer a variety of fresh fruits and vegetables',
+        'Ensure cage has multiple perches of different sizes',
+        'Provide toys for mental stimulation',
+        'Allow daily flight time outside cage',
+        'Maintain clean environment and fresh water',
+        'Regular health check-ups with avian veterinarian',
+        'Support blue-series coloration with proper nutrition',
+        'Keep in pairs for optimal social behavior'
       ]
     }
   }

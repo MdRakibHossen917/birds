@@ -147,7 +147,7 @@ At HK Aviary BD, we specialize in producing high-quality color mutations like th
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">Bird Blog</h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            Latest articles, insights, and stories about the fascinating world of birds
+          Inspiring stories and expert insights from the fascinating world of birds.
           </p>
         </div>
         

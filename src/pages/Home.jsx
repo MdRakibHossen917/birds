@@ -7,15 +7,15 @@ function Home() {
   const [loadedImages, setLoadedImages] = useState({})
 
   const galleryImages = [
-    { src: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href, id: 'img1' },
-    { src: new URL('../assets/LoveBirds/birds4.jpg', import.meta.url).href, id: 'img2' },
-    { src: new URL('../assets/LoveBirds/birds5.jpg', import.meta.url).href, id: 'img3' },
-    { src: new URL('../assets/LoveBirds/birds6.jpg', import.meta.url).href, id: 'img4' },
-    { src: new URL('../assets/LoveBirds/birds7.jpg', import.meta.url).href, id: 'img5' },
-    { src: new URL('../assets/LoveBirds/birds10.jpg', import.meta.url).href, id: 'img6' },
-    { src: new URL('../assets/LoveBirds/birds11.jpg', import.meta.url).href, id: 'img7' },
-    { src: new URL('../assets/LoveBirds/loveBirds2.jpg', import.meta.url).href, id: 'img8' },
-    { src: new URL('../assets/LoveBirds/Perblue fisher.jpg', import.meta.url).href, id: 'img9' },
+    { src: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href, id: 'img1', mutation: 'Yellow-face Blue' },
+    { src: new URL('../assets/LoveBirds/birds4.jpg', import.meta.url).href, id: 'img2', mutation: 'Cobalt Blue' },
+    { src: new URL('../assets/LoveBirds/birds5.jpg', import.meta.url).href, id: 'img3', mutation: 'Parblue Fischer' },
+    { src: new URL('../assets/LoveBirds/birds6.jpg', import.meta.url).href, id: 'img4', mutation: 'Green Fischer' },
+    { src: new URL('../assets/LoveBirds/birds7.jpg', import.meta.url).href, id: 'img5', mutation: 'Lutino Fischer' },
+    { src: new URL('../assets/LoveBirds/birds10.jpg', import.meta.url).href, id: 'img6', mutation: 'Pastel Blue' },
+    { src: new URL('../assets/LoveBirds/birds11.jpg', import.meta.url).href, id: 'img7', mutation: 'Violet Cobalt' },
+    { src: new URL('../assets/LoveBirds/loveBirds2.jpg', import.meta.url).href, id: 'img8', mutation: 'Wild Type Green' },
+    { src: new URL('../assets/LoveBirds/Perblue fisher.jpg', import.meta.url).href, id: 'img9', mutation: 'Perblue Fischer' },
   ]
 
   const handleImageLoad = (imageId) => {
@@ -25,31 +25,59 @@ function Home() {
   const popularBirds = [
     { 
       name: 'Upcoming Champion', 
-      image: 'https://i.ibb.co.com/hFdjK7mj/542047303-771751132110179-6116929702425819055-n.jpg',
+      image: new URL('../assets/LoveBirds/41.jpg', import.meta.url).href,
       badge: 'Title Holder',
       badgeColor: 'bg-orange-500',
       description: 'Upcoming Title Holder - Exceptional beauty and quality, ready to take the crown.', 
       color: 'from-orange-500 to-orange-600',
       link: '/lovebird/2'
     },
-    { 
-      name: 'Baby Lovebirds', 
-      image: 'https://i.ibb.co.com/WNpcbnhT/484012358-642550928363534-4935449803921063486-n.jpg',
-      badge: 'Next Big Thing',
-      badgeColor: 'bg-green-500',
-      description: 'The Next Big Thing - Adorable baby lovebirds with promising potential', 
-      color: 'from-green-500 to-green-600',
+   { 
+      name: 'Opaline Fischer Violet Pied', 
+      image: new URL('../assets/LoveBirds/45.jpg', import.meta.url).href,
+      badge: 'Exotic Pair',
+      badgeColor: 'bg-purple-500',
+      description: 'A stunning pair featuring a Green Opaline Fischer and a Violet Pied mutation, both showcasing perfect eye-rings.', 
+      color: 'from-blue-500 to-green-600',
       link: '/lovebird/4'
     },
     { 
       name: 'perblue opaline', 
-      image: 'https://i.ibb.co.com/K323mnR/599816129-853271760624782-5742339443848375908-n.jpg',
+      image: new URL('../assets/LoveBirds/51.jpg', import.meta.url).href,
       badge: 'Best in Show',
       badgeColor: 'bg-yellow-500',
       description: 'Quality perblue opaline baby ( Mango Head)', 
       color: 'from-purple-500 to-blue-600',
       link: '/lovebird/5'
     },
+    { 
+      name: 'Perblue fisher', 
+      image: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href,
+      badge: 'Elite Selection',
+      badgeColor: 'bg-yellow-400',
+      description: 'A vibrant mutation featuring a solid bright yellow body, a striking deep red mask, and the signature bold white eye-ring.', 
+      color: 'from-yellow-400 to-orange-500',
+      link: '/lovebird/lutino-fischer'
+    },
+   { 
+  name: 'Green opaline', 
+  image: new URL('../assets/LoveBirds/birds35.jpg', import.meta.url).href,
+  badge: 'Wild Type',
+  badgeColor: 'bg-green-600',
+  description: 'Classic wild-type green opaline with a bright orange-red mask and bold white eye-ring', 
+  color: 'from-green-500 to-emerald-700',
+  link: '/lovebird/standard-green'
+},
+{ 
+  name: 'Parblue Fischer', 
+  image: new URL('../assets/LoveBirds/44.jpg', import.meta.url).href,
+  badge: 'Exotic Pastel',
+  badgeColor: 'bg-blue-500',
+  description: 'A beautiful blue-series mutation with a soft yellow-to-peach mask, turquoise/cobalt body feathers, and a prominent white eye-ring.', 
+  color: 'from-cyan-500 to-blue-700',
+  link: '/lovebird/parblue-fischer'
+}
+    
   ]
 
   return (
@@ -90,7 +118,7 @@ function Home() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {bird.badge && (
-                  <div className={`absolute top-4 right-4 ${bird.badgeColor} text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transform group-hover:scale-110 transition-transform`}>
+                  <div className={`absolute top-4 right-4 ${bird.badgeColor} text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transform group-hover:scale-110 transition-transform backdrop-blur-lg bg-opacity-80 border border-white/40 drop-shadow-lg`}>
                     {bird.badge}
                   </div>
                 )}
@@ -103,7 +131,7 @@ function Home() {
                 </h3>
                 <p className="text-xs md:text-sm lg:text-base text-gray-600 text-center leading-relaxed mb-4 md:mb-4 line-clamp-3 flex-grow">{bird.description}</p>
                 <div className="text-center mt-auto">
-                  <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-blue-600 to-orange-500 text-white font-semibold text-sm md:text-base rounded-xl hover:from-blue-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+                  <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 border-2 border-blue-600 text-blue-600 font-semibold text-sm md:text-base rounded-xl hover:border-orange-600 hover:text-orange-600 transition-all duration-300 transform hover:scale-105 cursor-pointer">
                     View Details
                     <span className="group-hover:translate-x-1 transition-transform">→</span>
                   </div>
@@ -119,24 +147,31 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
-              Our Gallery
+            Wings of Nature
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6 md:mb-8"></div>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Explore our beautiful collection of lovebirds captured in stunning moments
+             Explore our beautiful collection of lovebirds captured in stunning moments
             </p>
           </div>
         </div>
         
         {/* Marquee Container */}
-        <div className="relative">
+        <div className="relative marquee-container">
           <div className="flex gap-6 animate-marquee whitespace-nowrap">
             {[...Array(2)].map((_, setIndex) => (
               <div key={setIndex} className="flex gap-6">
                 {galleryImages.map((image, imgIndex) => (
-                  <div key={`${setIndex}-${imgIndex}`} className="w-80 h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 relative">
+                  <div key={`${setIndex}-${imgIndex}`} className="gallery-card w-80 h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex-shrink-0 relative group cursor-pointer select-none">
+                    {/* Love Icon */}
+                    <div className="absolute top-3 right-3 z-30 w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                      <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                      </svg>
+                    </div>
+                    
                     {!loadedImages[`${image.id}-${setIndex}`] && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse">
+                      <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse z-10">
                         <div className="w-full h-full flex items-center justify-center">
                           <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
                         </div>
@@ -144,13 +179,21 @@ function Home() {
                     )}
                     <img 
                       src={image.src}
-                      alt="Lovebird" 
+                      alt={image.mutation} 
                       loading="lazy"
                       onLoad={() => handleImageLoad(`${image.id}-${setIndex}`)}
-                      className={`w-full h-full object-cover hover:scale-110 transition-transform duration-500 ${
+                      className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
                         !loadedImages[`${image.id}-${setIndex}`] ? 'opacity-0' : 'opacity-100'
                       }`}
                     />
+                    
+                    {/* Mutation Info Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-6 z-20 pointer-events-none">
+                      <div className="text-center px-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h4 className="text-white font-bold text-xl mb-1">{image.mutation}</h4>
+                        <p className="text-white/90 text-sm font-medium">Premium Quality Bird</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
