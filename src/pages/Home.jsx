@@ -5,6 +5,32 @@ import Header from '../components/Header.jsx'
 
 function Home() {
   const [loadedImages, setLoadedImages] = useState({})
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = (e) => {
+    setTouchEnd(e.changedTouches[0].clientX)
+    handleSwipe()
+  }
+
+  const handleSwipe = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > 50
+    const isRightSwipe = distance < -50
+    
+    if (isLeftSwipe) {
+      setCurrentSlide((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1))
+    }
+    if (isRightSwipe) {
+      setCurrentSlide((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1))
+    }
+  }
 
   const galleryImages = [
     { src: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href, id: 'img1', mutation: 'Yellow-face Blue' },
@@ -142,8 +168,8 @@ function Home() {
         </div>
       </div>
 
-      {/* Photo Gallery Marquee Section */}
-      <div className="bg-white py-12 md:py-16 lg:py-20 overflow-hidden">
+      {/* Photo Gallery Slider Section */}
+      <div className="bg-white py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-black mb-4 md:mb-6">
@@ -156,21 +182,15 @@ function Home() {
           </div>
         </div>
         
-        {/* Marquee Container */}
-        <div className="relative marquee-container">
-          <div className="flex gap-6 animate-marquee whitespace-nowrap">
-            {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex gap-4">
-                {galleryImages.map((image, imgIndex) => (
-                  <div key={`${setIndex}-${imgIndex}`} className="gallery-card w-80 h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex-shrink-0 relative group cursor-pointer select-none">
-                    {/* Love Icon */}
-                    <div className="absolute top-3 right-3 z-30 w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
-                      <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                      </svg>
-                    </div>
-                    
-                    {!loadedImages[`${image.id}-${setIndex}`] && (
+        {/* Slider Container */}
+        <div className="relative max-w-6xl mx-auto px-4">
+          {/* Main Slider */}
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+            <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+              {galleryImages.map((image, index) => (
+                <div key={index} className="w-full flex-shrink-0 relative">
+                  <div className="relative h-96 md:h-[500px] overflow-hidden">
+                    {!loadedImages[`slider-${image.id}`] && (
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse z-10">
                         <div className="w-full h-full flex items-center justify-center">
                           <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
@@ -181,22 +201,61 @@ function Home() {
                       src={image.src}
                       alt={image.mutation} 
                       loading="lazy"
-                      onLoad={() => handleImageLoad(`${image.id}-${setIndex}`)}
-                      className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
-                        !loadedImages[`${image.id}-${setIndex}`] ? 'opacity-0' : 'opacity-100'
+                      onLoad={() => setLoadedImages(prev => ({ ...prev, [`slider-${image.id}`]: true }))}
+                      className={`w-full h-full object-cover transition-transform duration-500 ${
+                        !loadedImages[`slider-${image.id}`] ? 'opacity-0' : 'opacity-100'
                       }`}
                     />
                     
                     {/* Mutation Info Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-6 z-20 pointer-events-none">
-                      <div className="text-center px-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                        <h4 className="text-white font-bold text-xl mb-1">{image.mutation}</h4>
-                        <p className="text-white/90 text-sm font-medium">Premium Quality Bird</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end justify-center pb-8">
+                      <div className="text-center px-4">
+                        <h4 className="text-white font-bold text-2xl md:text-3xl mb-2">{image.mutation}</h4>
+                        <p className="text-white/90 text-base md:text-lg font-medium">Premium Quality Bird</p>
                       </div>
                     </div>
+
+                    {/* Love Icon */}
+                    <div className="absolute top-4 right-4 z-30">
+                      <svg className="w-7 h-7 text-red-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                      </svg>
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Previous Button */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1))}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20"
+              aria-label="Previous slide"
+            >
+            </button>
+
+            {/* Next Button */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1))}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20"
+              aria-label="Next slide"
+            >
+            </button>
+          </div>
+
+          {/* Slider Dots */}
+          <div className="flex justify-center gap-3 mt-8">
+            {galleryImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? 'bg-blue-600 w-8'
+                    : 'bg-gray-300 hover:bg-gray-400 w-3'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
         </div>
