@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaHome, FaBlog, FaTrophy, FaInfoCircle } from 'react-icons/fa'
 import { HiMenu, HiX } from 'react-icons/hi'
 
 function Navbar() {
@@ -9,9 +9,10 @@ function Navbar() {
   
   const isActive = (path) => location.pathname === path
   const navLinks = [
-    { path: '/blogs', label: 'Blogs' },
-    { path: '/award', label: 'Award' },
-    { path: '/about-us', label: 'About us' }
+    { path: '/', label: 'Home', icon: FaHome, color: 'blue' },
+    { path: '/blogs', label: 'Blogs', icon: FaBlog, color: 'purple' },
+    { path: '/award', label: 'Award', icon: FaTrophy, color: 'yellow' },
+    { path: '/about-us', label: 'About Us', icon: FaInfoCircle, color: 'orange' }
   ]
 
   return (
@@ -58,83 +59,96 @@ function Navbar() {
               </a>
             </div>
 
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <HiX className="w-6 h-6" />
-              ) : (
+            {!isMenuOpen && (
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none transition-colors"
+                aria-label="Toggle menu"
+              >
                 <HiMenu className="w-6 h-6" />
-              )}
-            </button>
+              </button>
+            )}
           </div>
         </div>
       </nav>
 
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsMenuOpen(false)}
         ></div>
       )}
 
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 left-0 h-full w-[80%] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="flex flex-col h-full">
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center gap-3">
-              <img 
-                src="/logo.png" 
-                alt="HK Aviary BD Logo" 
-                className="h-10 w-auto object-contain"
-              />
-              <span className="text-xl font-bold text-orange-500">HK Aviary BD</span>
+          {/* Header */}
+          <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-orange-500 p-2">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="bg-white p-2 rounded-lg shadow-md">
+                  <img 
+                    src="/logo.png" 
+                    alt="HK Aviary BD Logo" 
+                    className="h-8 w-auto object-contain"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-white text-xl font-bold">HK Aviary BD</h2>
+                  <p className="text-blue-100 text-xs">Premium Birds</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="text-white hover:bg-white/20 p-2 rounded-full transition-all"
+                aria-label="Close menu"
+              >
+                <HiX className="w-6 h-6" />
+              </button>
             </div>
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-              aria-label="Close menu"
-            >
-              <HiX className="w-6 h-6" />
-            </button>
           </div>
 
-          <nav className="flex-1 p-6">
-            <ul className="space-y-4">
-              {navLinks.map(link => (
-                <li key={link.path}>
+          {/* Navigation */}
+          <nav className="flex-1 p-4 overflow-y-auto">
+            <div className="space-y-2">
+              {navLinks.map(link => {
+                const IconComponent = link.icon
+                const isCurrentPage = isActive(link.path)
+                return (
                   <Link
+                    key={link.path}
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`block px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      isActive(link.path)
-                        ? 'bg-blue-600 text-white'
+                    className={`relative flex items-center gap-4 px-4 py-3.5 rounded-xl font-semibold transition-all duration-300 group ${
+                      isCurrentPage
+                        ? 'text-blue-600'
                         : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
                     }`}
                   >
-                    {link.label}
+                    <div className={`p-2 rounded-lg transition-all ${
+                      isCurrentPage 
+                        ? `bg-${link.color}-100` 
+                        : `bg-${link.color}-100 group-hover:bg-${link.color}-200`
+                    }`}>
+                      <IconComponent className={`w-5 h-5 text-${link.color}-600`} />
+                    </div>
+                    <span className="text-base">{link.label}</span>
+                    {isCurrentPage && (
+                      <span className="absolute bottom-2 left-4 right-4 h-0.5 bg-blue-600"></span>
+                    )}
                   </Link>
-                </li>
-              ))}
-            </ul>
+                )
+              })}
+            </div>
           </nav>
 
-          <div className="p-6 border-t border-gray-200">
-            <a
-              href="https://wa.me/8801737149420"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsMenuOpen(false)}
-              className="w-full bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
-            >
-              <FaWhatsapp className="w-5 h-5" />
-              WhatsApp
-            </a>
+          {/* Footer */}
+          <div className="p-4 bg-gray-50 text-center">
+            <p className="text-sm font-semibold text-gray-800">HK Aviary BD</p>
+            <p className="text-xs text-gray-600">Quality Bird Breeding</p>
           </div>
         </div>
       </div>
