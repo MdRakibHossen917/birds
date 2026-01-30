@@ -35,15 +35,19 @@ function Home() {
   }
 
   const galleryImages = [
-    { src: new URL('../assets/LoveBirds/birds3.jpg', import.meta.url).href, id: 'img1', mutation: 'Yellow-face Blue' },
+    
+    { src: new URL('../assets/LoveBirds/Perblue fisher.jpg', import.meta.url).href, id: 'img1', mutation: 'Parblue' },
     { src: new URL('../assets/LoveBirds/birds4.jpg', import.meta.url).href, id: 'img2', mutation: 'Cobalt Blue' },
     { src: new URL('../assets/LoveBirds/birds5.jpg', import.meta.url).href, id: 'img3', mutation: 'Parblue Fischer' },
-    { src: new URL('../assets/LoveBirds/birds6.jpg', import.meta.url).href, id: 'img4', mutation: 'Green Fischer' },
+    { src: new URL('../assets/LoveBirds/birds29.jpg', import.meta.url).href, id: 'img4', mutation: 'Blue/Violet Hues' },
     { src: new URL('../assets/LoveBirds/birds7.jpg', import.meta.url).href, id: 'img5', mutation: 'Lutino Fischer' },
     { src: new URL('../assets/LoveBirds/birds10.jpg', import.meta.url).href, id: 'img6', mutation: 'Pastel Blue' },
     { src: new URL('../assets/LoveBirds/birds11.jpg', import.meta.url).href, id: 'img7', mutation: 'Violet Cobalt' },
-    { src: new URL('../assets/LoveBirds/loveBirds2.jpg', import.meta.url).href, id: 'img8', mutation: 'Wild Type Green' },
+    { src: new URL('../assets/LoveBirds/76.jpg', import.meta.url).href, id: 'img8', mutation: 'Blue Euwing & Turquoise ' },
     { src: new URL('../assets/LoveBirds/Perblue fisher.jpg', import.meta.url).href, id: 'img9', mutation: 'Perblue Fischer' },
+    { src: new URL('../assets/LoveBirds/72.jpg', import.meta.url).href, id: 'img10', mutation: 'Blue Euwing' },
+     { src: new URL('../assets/LoveBirds/73.jpg', import.meta.url).href, id: 'img11', mutation: 'Wild-type' },
+     { src: new URL('../assets/LoveBirds/71.jpg', import.meta.url).href, id: 'img12', mutation: 'Green Euwing' },
   ]
 
   const handleImageLoad = (imageId) => {
